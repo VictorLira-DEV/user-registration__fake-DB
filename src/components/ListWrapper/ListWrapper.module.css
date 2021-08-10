@@ -1,0 +1,23 @@
+.list_wrapper {
+  background-color: #1a181a;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  list-style: none;
+  padding: 10px 20px;
+  width: 720px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  height: 450px;
+  border: 3px solid white;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+}
+/*# sourceMappingURL=ListWrapper.module.css.map */

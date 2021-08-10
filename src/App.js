@@ -2,30 +2,38 @@ import React from "react";
 import Form from "./components/Form/Form";
 import Header from "./components/Header/Header";
 import UserList from "./components/UserList/UserList";
+import CompaniesList from "./components/CompaniesList/CompaniesList";
 import Footer from "./components/Footer/Footer";
+import ListWrapper from "./components/ListWrapper/ListWrapper";
 import { useState, useEffect } from "react";
+
+import NavContext from './components/context/navcontext';
 
 function App() {
   const [username, setUsername] = useState([]);
-
+  const [companiesList, setCompaniesList] = useState([]);
+  const [menu, menuState] = useState("users");
   useEffect(() => {
     let account = [];
-    fetch("http://localhost:3004/users")
+    fetch(`http://localhost:3004/${menu}`)
       .then((response) => response.json())
       .then((json) => {
         json.forEach((f) => {
           account.unshift(f);
         });
 
-        setUsername((prev) => {
-          const previous = [...prev];
-          previous.forEach((acc) => {
-            account.push(acc);
+        if (menu === "companies") {
+          setCompaniesList((prev) => {
+            return account;
           });
-          return account;
-        });
+        }
+        if (menu === "users") {
+          setUsername((prev) => {
+            return account;
+          });
+        }
       });
-  }, []);
+  }, [menu]);
 
   const addingNewUser = function (
     uName,
@@ -40,7 +48,7 @@ function App() {
       previous.unshift({
         username: uName,
         email: uEmail,
-        municipio: uMunicipio,
+        city: uMunicipio,
         profession: uProfissao,
         id: randomID,
         sex: userSex,
@@ -63,15 +71,22 @@ function App() {
     });
   };
 
+  const menuOption = function(e){
+    menuState(e.target.id)
+  }
+
   return (
-    <React.Fragment>
+    <NavContext.Provider value={{onMenuOption: menuOption}}>
       <Header />
       <div className="wrapper">
         <Form onAddingNewUser={addingNewUser} />
-        <UserList list={username} onRemoveAccount={removeAccount} />
+        <ListWrapper>
+          {menu === 'companies' && <CompaniesList list={companiesList} />}
+          {menu === 'users' &&  <UserList list={username} onRemoveAccount={removeAccount} />}
+        </ListWrapper>
       </div>
       <Footer />
-    </React.Fragment>
+    </NavContext.Provider>
   );
 }
 

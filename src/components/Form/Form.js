@@ -1,12 +1,13 @@
 import { useEffect, useReducer, useState } from "react";
 import styles from "./Form.module.css";
 import Button from "../UI/button/Button";
+
 const Form = function (props) {
   // const [isFormInputValid, setIsformInputValid] = useState(true);
   const [isFormValid, setIsFormValid] = useState(false);
   const [userSex, setUserSex] = useState(false);
 
-  const [username, dispatchUsername] = useReducer(
+  const [usersameState, dispatchUsername] = useReducer(
     (state, action) => {
       if (action.type === "USER_INPUT") {
         return { value: action.val, isValid: action.val.length > 5 };
@@ -14,7 +15,6 @@ const Form = function (props) {
       if (action.type === "USER_BLUR") {
         return { value: state.value, isValid: state.value.length > 5 };
       }
-
       if (action.type === "CLEAR_FIELDS") {
         return { value: "", isValid: null };
       }
@@ -38,14 +38,12 @@ const Form = function (props) {
       if (action.type === "USER_INPUT") {
         return { value: action.val, isValid: action.val.trim().includes("@") };
       }
-
       if (action.type === "USER_BLUR") {
         return {
           value: state.value,
           isValid: state.value.trim().includes("@"),
         };
       }
-
       if (action.type === "CLEAR_FIELDS") {
         return { value: "", isValid: null };
       }
@@ -63,17 +61,15 @@ const Form = function (props) {
     dispatchEmailState({ type: "USER_BLUR" });
   };
 
-  //municipio
-  const [municipio, dispatchMunicipio] = useReducer(
+  //cityState
+  const [cityState, dispatchMunicipio] = useReducer(
     (state, action) => {
       if (action.type === "USER_INPUT") {
         return { value: action.val, isValid: action.val.trim().length > 5 };
       }
-
       if (action.type === "USER_BLUR") {
         return { value: state.value, isValid: state.value.trim().length > 5 };
       }
-
       if ((action.type = "CLEAR_FIELDS")) {
         return { value: "", isValid: null };
       }
@@ -100,14 +96,12 @@ const Form = function (props) {
           isValid: action.val.trim().length > 5,
         };
       }
-
       if (action.type === "USER_BLUR") {
         return {
           value: state.value,
           isValid: state.value.trim().length > 5,
         };
       }
-
       if (action.type === "CLEAR_FIELDS") {
         return { value: "", isValid: null };
       }
@@ -133,14 +127,13 @@ const Form = function (props) {
   const addUser = function (e) {
     e.preventDefault();
     if (isFormValid !== true) return;
-    console.log(username)
     let randomID = Math.random().toString(); //RANDOM ID
     fetch("http://localhost:3004/users", {
       method: "POST",
       body: JSON.stringify({
-        username: username.value,
+        username: usersameState.value,
         email: emailState.value,
-        municipio: municipio.value,
+        city: cityState.value,
         profession: professionState.value,
         id: randomID,
         sex: userSex,
@@ -149,13 +142,13 @@ const Form = function (props) {
         "Content-Type": "application/json; charset=UTF-8",
       },
     })
-      .then((response) => response.json())
-      .then((data) => {});
+    .then((response) => response.json())
+    .then((data) => {});
 
     props.onAddingNewUser(
-      username.value,
+      usersameState.value,
       emailState.value,
-      municipio.value,
+      cityState.value,
       professionState.value,
       randomID,
       userSex
@@ -167,9 +160,9 @@ const Form = function (props) {
     dispatchProfessionState({ type: "CLEAR_FIELDS" });
   };
 
-  const { isValid: usernameValid } = username;
+  const { isValid: usernameValid } = usersameState;
   const { isValid: emailValid } = emailState;
-  const { isValid: municipioValid } = municipio;
+  const { isValid: cityValid } = cityState;
   const { isValid: professionValid } = professionState;
 
   useEffect(() => {
@@ -177,7 +170,7 @@ const Form = function (props) {
       setIsFormValid(
         usernameValid &&
           emailValid &&
-          municipioValid &&
+          cityValid &&
           professionValid &&
           userSex !== false
       );
@@ -186,16 +179,15 @@ const Form = function (props) {
     return () => {
       clearTimeout(timer);
     };
-  }, [usernameValid, emailValid, municipioValid, professionValid, userSex]);
+  }, [usernameValid, emailValid, cityValid, professionValid, userSex]);
 
   return (
     <form id="form" method="post" className={styles.form}>
       <h2>Create Account</h2>
-
       <div
         className={`${styles.form_control} ${
-          (username.isValid === false && styles.invalid) ||
-          (username.isValid === true && styles.valid)
+          (usersameState.isValid === false && styles.invalid) ||
+          (usersameState.isValid === true && styles.valid)
         }`}
       >
         <label htmlFor="name"> Username</label>
@@ -204,7 +196,7 @@ const Form = function (props) {
           id="name"
           onChange={usernameChangeHandler}
           onBlur={usernameBlurHandler}
-          value={username.value}
+          value={usersameState.value}
         />
       </div>
       <div
@@ -224,17 +216,17 @@ const Form = function (props) {
       </div>
       <div
         className={`${styles.form_control} ${
-          (municipio.isValid === false && styles.invalid) ||
-          (municipio.isValid === true && styles.valid)
+          (cityState.isValid === false && styles.invalid) ||
+          (cityState.isValid === true && styles.valid)
         }`}
       >
-        <label htmlFor="municipio"> Municipio</label>
+        <label htmlFor="municipio"> City </label>
         <input
           type="text"
           id="municipio"
           onChange={municipioChangeHandler}
           onBlur={municipioBlurHandler}
-          value={municipio.value}
+          value={cityState.value}
         />
       </div>
       <div

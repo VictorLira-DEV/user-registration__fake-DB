@@ -1,0 +1,12 @@
+.navigation{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    .navigation_item{
+        &:not(:last-child){
+            margin-right: 20px;
+        }
+        color: white;
+        cursor: pointer;
+    }
+}

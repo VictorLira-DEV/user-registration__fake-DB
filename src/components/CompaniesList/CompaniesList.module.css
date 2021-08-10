@@ -1,4 +1,4 @@
-.user_item {
+.company_item {
   background: #313233;
   border: 1px solid #5a5959;
   min-width: 200px;
@@ -11,12 +11,13 @@
   color: #e2d2bc;
 }
 
-.user_item:not(:last-child) {
+.company_item:not(:last-child) {
   margin-right: 10px;
 }
 
-.user_item .profile {
+.company_item .company_profile {
   max-width: 100%;
+  padding: 10px;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -33,11 +34,11 @@
           align-items: center;
 }
 
-.user_item .profile p {
+.company_item .company_profile p {
   margin-bottom: 10px;
 }
 
-.user_item .profile button {
+.company_item .company_profile .overview {
   width: 90%;
   cursor: pointer;
   margin-top: 10px;
@@ -47,26 +48,23 @@
   padding: 5px 10px;
   color: white;
   font-size: 14px;
-}
-
-.user_item .profile button.remove {
-  background: #f84444;
-  border: 1px solid red;
-}
-
-.user_item .profile button.overview {
   background: #2fb62f;
-  border: 1px solid #24c065;
+  border: 1px solid #abfacc;
 }
 
-.user_item .profile img {
-  width: 100%;
-  height: 200px;
+.company_item .company_profile img {
+  width: 130px;
+  border: 2px solid white;
+  height: 130px;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 10px;
 }
 
-.user_item .profile .home {
+.company_item .company_profile .home {
   width: 150px;
+  margin-top: 10px;
   font-size: 14px;
   margin-bottom: 5px;
   display: -webkit-box;
@@ -77,13 +75,13 @@
           justify-content: flex-start;
 }
 
-.user_item .profile .home :first-child {
+.company_item .company_profile .home :first-child {
   justify-self: flex-start;
   font-size: 20px;
   margin-right: 20px;
 }
 
-.user_item .profile .work {
+.company_item .company_profile .work {
   width: 150px;
   font-size: 15px;
   display: -webkit-box;
@@ -96,9 +94,30 @@
       flex-wrap: wrap;
 }
 
-.user_item .profile .work :first-child {
+.company_item .company_profile .work :first-child {
   justify-self: flex-start;
   font-size: 20px;
   margin-right: 20px;
 }
-/*# sourceMappingURL=UserList.module.css.map */
+
+.company_item .company_profile .tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 20px 0 20px 0;
+}
+
+.company_item .company_profile .tech .tech_img {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+}
+/*# sourceMappingURL=CompaniesList.module.css.map */
