@@ -1,0 +1,87 @@
+.form {
+  width: 400px;
+  padding: 30px 40px;
+  background-color: white;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.form h2 {
+  margin-bottom: 30px;
+}
+
+.form .sex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.form .sex div label {
+  margin-right: 10px;
+}
+
+.form .form_control {
+  color: #535353;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.form .form_control.invalid label {
+  color: red;
+}
+
+.form .form_control.invalid input {
+  border: 1px solid red;
+  background: #f5e6e6;
+}
+
+.form .form_control.valid input {
+  border: 1px solid #00ff2a;
+}
+
+.form .form_control input {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.form .btn_submit {
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.form .btn_submit:hover {
+  background-color: #7b319b;
+}
+
+.form .btn_submit.enabled {
+  cursor: pointer;
+  background-color: #8e44ad;
+  border: 1px solid #8e44ad;
+}
+
+.form .btn_submit.disabled {
+  cursor: not-allowed;
+  background: #b4b4b4;
+  border: 1px solid #b4b4b4;
+}
+/*# sourceMappingURL=Form.module.css.map */

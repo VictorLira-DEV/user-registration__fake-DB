@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "username": "Iago reis",
+      "email": "iago@gmail.com",
+      "municipio": "Villa velha",
+      "profession": "Advogado",
+      "id": "0.5921068988968536",
+      "sex": "male"
+    },
+    {
+      "username": "victor reis",
+      "email": "victor@gmail.com",
+      "municipio": "Cariacica",
+      "profession": "Programador",
+      "id": "0.015021081893926702",
+      "sex": "male"
+    },
+    {
+      "username": "Isabella santos",
+      "email": "Isabella@gmail.com",
+      "municipio": "Vitória",
+      "profession": "Professora",
+      "id": "0.3074906892066249",
+      "sex": "female"
+    },
+    {
+      "username": "raquel santos",
+      "email": "raquel@gmail.com",
+      "municipio": "Viana ES",
+      "profession": "Empresária",
+      "id": "0.36968077151072154",
+      "sex": "female"
+    },
+    {
+      "username": "Thiago pereira",
+      "email": "thiago@gmail.com",
+      "municipio": "Vila velha",
+      "profession": "Médico",
+      "id": "0.05318199578152427",
+      "sex": "male"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "description": "Apple Inc. is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, computer software, and online services. ... Its online services include the iTunes Store, the iOS App Store and Mac App Store, Apple Music, and iCloud"
+    },
+    {
+      "id": "2",
+      "name": "Microsoft",
+      "description": "Microsoft Corporation, incorporated on September 22, 1993, is a technology company. The Company develops, licenses, and supports a range of software products, services and devices. The Company's segments include Productivity and Business Processes, Intelligent Cloud and More Personal Computing"
+    },
+    {
+      "id": "3",
+      "name": "Google",
+      "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
+    }
+  ]
+}

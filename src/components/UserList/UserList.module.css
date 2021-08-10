@@ -1,0 +1,127 @@
+.user_list {
+  background-color: #1a181a;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  list-style: none;
+  padding: 10px 20px;
+  width: 720px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  height: 450px;
+  border: 3px solid white;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+}
+
+.user_list li {
+  background: #313233;
+  border: 1px solid #5a5959;
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  color: #e2d2bc;
+}
+
+.user_list li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.user_list li .profile {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_list li .profile p {
+  margin-bottom: 10px;
+}
+
+.user_list li .profile button {
+  width: 90%;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  padding: 5px 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.user_list li .profile button.remove {
+  background: #f84444;
+  border: 1px solid red;
+}
+
+.user_list li .profile button.overview {
+  background: #2fb62f;
+  border: 1px solid #24c065;
+}
+
+.user_list li .profile img {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.user_list li .profile .home {
+  width: 150px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.user_list li .profile .home :first-child {
+  justify-self: flex-start;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.user_list li .profile .work {
+  width: 150px;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.user_list li .profile .work :first-child {
+  justify-self: flex-start;
+  font-size: 20px;
+  margin-right: 20px;
+}
+/*# sourceMappingURL=UserList.module.css.map */

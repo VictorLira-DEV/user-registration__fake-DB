@@ -1,0 +1,106 @@
+
+.user_list {
+  background-color: rgb(26, 24, 26);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+  list-style: none;
+  padding: 10px 20px;
+  width: 720px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  height: 450px;
+  border: 3px solid white;
+  overflow-x: scroll;
+
+  scrollbar-width: thin;
+
+
+  li {
+    background: rgb(49, 50, 51);
+    border: 1px solid rgb(90, 89, 89);
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    color: rgb(226, 210, 188);
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    .profile {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      button {
+        width: 90%;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 4px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        padding: 5px 10px;
+        color: white;
+        font-size: 14px;
+
+        &.remove {
+          background: rgb(248, 68, 68);
+          border: 1px solid red;
+        }
+
+        &.overview {
+          background: rgb(47, 182, 47);
+        //   color: black;
+        //   font-weight: bold;
+          border: 1px solid rgb(36, 192, 101);
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+      }
+      .home {
+        width: 150px;
+        font-size: 14px;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: flex-start;
+        & :first-child {
+          justify-self: flex-start;
+          font-size: 20px;
+          margin-right: 20px;
+        }
+
+      }
+
+      .work {
+        width: 150px;
+        font-size: 15px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        & :first-child {
+          justify-self: flex-start;
+          font-size: 20px;
+          margin-right: 20px;
+        //   color: rgb(228, 155, 224);
+        //   color: rgb(127, 177, 253);
+        }
+      }
+    }
+  }
+}
