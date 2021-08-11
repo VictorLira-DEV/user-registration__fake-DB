@@ -14,7 +14,7 @@ const Navigation = function () {
         <li className={styles.navigation_item} id="companies" onClick={ctx.onMenuOption}>
           Companies
         </li>
-        <li className={styles.navigation_item}>
+        <li className={styles.navigation_item} id="founders" onClick={ctx.onMenuOption}>
           Founders
         </li>
       </ul>

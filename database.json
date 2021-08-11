@@ -1,20 +1,30 @@
 {
   "users": [
     {
-      "username": "adsfasdf",
-      "email": "adfasdfdfa@a",
-      "city": "@safdsaf",
-      "profession": "adfadf",
-      "id": "0.6695107862387908",
-      "sex": "male"
+      "username": "adfasdf",
+      "email": "dsafadsf@asdf",
+      "city": "adfadsfadf",
+      "profession": "adsfadsfasd",
+      "id": "0.811648828278833",
+      "sex": "female",
+      "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
     },
     {
-      "username": "sdfgsdfg",
-      "email": "@asdf",
-      "city": "adsfasdf",
-      "profession": "adsfasdf",
-      "id": "0.05729136277089131",
-      "sex": "female"
+      "username": "adfasdf",
+      "email": "dsafadsf@asdf",
+      "city": "adfadsfadf",
+      "profession": "adsfadsfasd",
+      "id": "0.811648828d278833",
+      "sex": "female",
+      "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
+    },
+    {
+      "username": "Marcos",
+      "email": "Marcos@gmail.com",
+      "city": "cariacica",
+      "profession": "medico",
+      "id": "0.9021901222908788",
+      "sex": "male"
     }
   ],
   "companies": [
@@ -37,6 +47,32 @@
       "name": "Facebook",
       "year": "12/03/1997",
       "img": "facebook",
+      "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
+    }
+  ],
+  "founders": [
+    {
+      "id": "c1",
+      "name": "Mark Zuckerberg",
+      "company": "Facebook",
+      "year": "12/03/1997",
+      "img": "mark",
+      "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
+    },
+    {
+      "id": "cdf1",
+      "name": "Larry Page",
+      "company": "Google",
+      "year": "12/03/1997",
+      "img": "larry",
+      "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
+    },
+    {
+      "id": "dfc1",
+      "name": "Daniel Ek",
+      "company": "Spotify",
+      "year": "12/03/1997",
+      "img": "daniel",
       "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
     }
   ]

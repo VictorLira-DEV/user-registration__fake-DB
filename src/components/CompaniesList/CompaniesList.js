@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./CompaniesList.module.css";
 import { HiUserGroup } from "react-icons/hi";
 import { BsFillPersonCheckFill } from "react-icons/bs";
@@ -13,6 +13,9 @@ import { FaReact } from "react-icons/fa";
 import Button from "../UI/button/Button";
 
 const CompaniesList = function (props) {
+    const [companyHover, setCompanyHover] = useState('')
+
+
   let icons = "";
   const displayIcons = function (name) {
     if (name === "Spotify") {
@@ -28,7 +31,6 @@ const CompaniesList = function (props) {
         </>
       );
     }
-
     if (name === "Facebook") {
       icons = (
         <>
@@ -60,6 +62,18 @@ const CompaniesList = function (props) {
     }
   };
 
+  const displayCompanyOverview = function(e){
+    e.preventDefault();
+    setCompanyHover(e.target.id)
+  }
+
+  const hideCompanyOverview = function(){
+    setCompanyHover('')
+  }
+
+  
+
+
   return (
     <React.Fragment>
       {props.list.map((acc) => {
@@ -77,7 +91,11 @@ const CompaniesList = function (props) {
                 {displayIcons(acc.name)}
                 {icons}
               </div>
-              <Button className={styles.overview}>Overview</Button>
+              <Button id={acc.id} onClick={displayCompanyOverview} className={styles.overview}>Overview</Button>
+            </div>
+            <div onMouseOut={hideCompanyOverview} className={`${styles['overview_company_profile']} ${companyHover === acc.id && styles['overview_company_profile--hover']}  `}> 
+                  <h2>Overview</h2>
+                  <p>{acc.description}</p>
             </div>
           </li>
         );

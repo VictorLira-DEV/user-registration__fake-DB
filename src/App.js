@@ -3,6 +3,7 @@ import Form from "./components/Form/Form";
 import Header from "./components/Header/Header";
 import UserList from "./components/UserList/UserList";
 import CompaniesList from "./components/CompaniesList/CompaniesList";
+import Founders from './components/Founders/Founders';
 import Footer from "./components/Footer/Footer";
 import ListWrapper from "./components/ListWrapper/ListWrapper";
 import { useState, useEffect } from "react";
@@ -12,6 +13,7 @@ import NavContext from './components/context/navcontext';
 function App() {
   const [username, setUsername] = useState([]);
   const [companiesList, setCompaniesList] = useState([]);
+  const [founders, setFounders] = useState([])
   const [menu, menuState] = useState("users");
   useEffect(() => {
     let account = [];
@@ -31,6 +33,10 @@ function App() {
           setUsername((prev) => {
             return account;
           });
+        }
+
+        if(menu === "founders"){
+          setFounders(account)
         }
       });
   }, [menu]);
@@ -83,6 +89,7 @@ function App() {
         <ListWrapper>
           {menu === 'companies' && <CompaniesList list={companiesList} />}
           {menu === 'users' &&  <UserList list={username} onRemoveAccount={removeAccount} />}
+          {menu === 'founders' &&  <Founders foundersList={founders} />}
         </ListWrapper>
       </div>
       <Footer />

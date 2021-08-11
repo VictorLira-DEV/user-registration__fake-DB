@@ -9,6 +9,29 @@
   overflow: hidden;
   padding-bottom: 10px;
   color: rgb(226, 210, 188);
+  position: relative;
+
+  
+
+  .overview_profile {
+    background: #fff;
+    color: #22254b;
+    position: absolute;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    max-height: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+      &.overview_profile--hover {
+        transform: translateY(0%);
+      }
+    
+  }
 
   &:not(:last-child) {
     margin-right: 10px;
@@ -44,12 +67,9 @@
 
       &.overview {
         background: rgb(47, 182, 47);
-        //   color: black;
-        //   font-weight: bold;
         border: 1px solid rgb(36, 192, 101);
       }
     }
-
     img {
       width: 100%;
       height: 200px;
@@ -63,7 +83,7 @@
       justify-content: flex-start;
       & :first-child {
         justify-self: flex-start;
-        font-size: 20px;
+        font-size: 15px;
         margin-right: 20px;
       }
     }
@@ -73,13 +93,12 @@
       font-size: 15px;
       display: flex;
       justify-content: flex-start;
+      align-items: center;
       flex-wrap: wrap;
       & :first-child {
         justify-self: flex-start;
-        font-size: 20px;
+        font-size: 15px;
         margin-right: 20px;
-        //   color: rgb(228, 155, 224);
-        //   color: rgb(127, 177, 253);
       }
     }
   }

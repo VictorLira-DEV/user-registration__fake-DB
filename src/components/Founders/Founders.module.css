@@ -1,4 +1,4 @@
-.company_item {
+.founders_list {
   background: #313233;
   border: 1px solid #5a5959;
   min-width: 200px;
@@ -12,36 +12,7 @@
   position: relative;
 }
 
-.company_item .overview_company_profile {
-  background: #fff;
-  color: #22254b;
-  position: absolute;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  padding: 1rem;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: auto;
-  max-height: 100%;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-
-.company_item .overview_company_profile.overview_company_profile--hover {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-}
-
-.company_item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.company_item .company_profile {
+.founders_list .founders_profile {
   max-width: 100%;
   padding: 10px;
   height: 100%;
@@ -60,11 +31,11 @@
           align-items: center;
 }
 
-.company_item .company_profile p {
+.founders_list .founders_profile p {
   margin-bottom: 10px;
 }
 
-.company_item .company_profile .overview {
+.founders_list .founders_profile .overview {
   width: 90%;
   cursor: pointer;
   margin-top: 10px;
@@ -76,9 +47,24 @@
   font-size: 14px;
   background: #2fb62f;
   border: 1px solid #abfacc;
+  margin-top: 40px;
 }
 
-.company_item .company_profile img {
+.founders_list .founders_profile .about {
+  width: 90%;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  padding: 5px 10px;
+  color: white;
+  font-size: 14px;
+  background: #2fadb6;
+  border: 1px solid #abfacc;
+}
+
+.founders_list .founders_profile img {
   width: 130px;
   border: 2px solid white;
   height: 130px;
@@ -88,70 +74,73 @@
   margin-bottom: 10px;
 }
 
-.company_item .company_profile .home {
-  width: 150px;
-  color: #e2d2bc;
-  font-size: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.company_item .company_profile .home :first-child {
-  justify-self: flex-start;
-  font-size: 15px;
-  margin-right: 20px;
-}
-
-.company_item .company_profile .work {
-  width: 150px;
-  color: #e2d2bc;
-  font-size: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.company_item .company_profile .work :first-child {
-  justify-self: flex-start;
-  font-size: 15px;
-  margin-right: 20px;
-}
-
-.company_item .company_profile .tech {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.founders_list .founders_profile .home {
   width: 100%;
-  margin: 20px 0 20px 0;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #e2d2bc;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.company_item .company_profile .tech .tech_img {
-  margin: 0;
-  width: 30px;
-  height: 30px;
+.founders_list .founders_profile .home :first-child {
+  justify-self: flex-start;
+  font-size: 15px;
+  margin-right: 20px;
+  color: #e2d2bc;
 }
-/*# sourceMappingURL=CompaniesList.module.css.map */
+
+.founders_list .founders_profile .work {
+  width: 100%;
+  color: #e2d2bc;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.founders_list .founders_profile .work :first-child {
+  justify-self: flex-start;
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+.founders_list .founders_profile .company {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.founders_list .founders_profile .company :first-child {
+  justify-self: flex-start;
+  font-size: 15px;
+  margin-right: 20px;
+}
+/*# sourceMappingURL=Founders.module.css.map */

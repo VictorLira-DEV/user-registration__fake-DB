@@ -1,14 +1,25 @@
-import React from "react";
+import React, {useState } from "react";
 import Button from "../UI/button/Button";
 import styles from "./UserList.module.css";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillPersonCheckFill } from "react-icons/bs";
 
 const UserList = function (props) {
+  const [userHover, serUserHover] = useState('')
+
   const removeAccount = function (e) {
     e.preventDefault();
     props.onRemoveAccount(e);
   };
+
+  const displayUserOverview = function(e){
+    e.preventDefault();
+    serUserHover(e.target.id)
+  }
+
+  const mouseOutHandler = function(e){
+    serUserHover('');
+  }
 
   return (
     <React.Fragment>
@@ -30,7 +41,7 @@ const UserList = function (props) {
                         : "rgb(228, 155, 224)"
                     }`,
                   }}
-                />{" "}
+                />
                 <span>{acc.profession} </span>
               </div>
               <div className={styles.btns}>
@@ -41,10 +52,14 @@ const UserList = function (props) {
                 >
                   Remove user
                 </Button>
-                <Button id={acc.id} className={styles.overview}>
-                  Overview
+                <Button id={acc.id} onClick={displayUserOverview} className={styles.overview}>
+                 Overview
                 </Button>
               </div>
+            </div>
+            <div onMouseOut={mouseOutHandler} className={`${styles['overview_profile']} ${acc.id === userHover && styles['overview_profile--hover']}  `}> 
+                  <h2>Overview</h2>
+                  <p>{acc.description}</p>
             </div>
           </li>
         );

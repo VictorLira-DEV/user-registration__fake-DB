@@ -9,6 +9,32 @@
   overflow: hidden;
   padding-bottom: 10px;
   color: #e2d2bc;
+  position: relative;
+}
+
+.user_item .overview_profile {
+  background: #fff;
+  color: #22254b;
+  position: absolute;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: 1rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  max-height: 100%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.user_item .overview_profile.overview_profile--hover {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .user_item:not(:last-child) {
@@ -79,7 +105,7 @@
 
 .user_item .profile .home :first-child {
   justify-self: flex-start;
-  font-size: 20px;
+  font-size: 15px;
   margin-right: 20px;
 }
 
@@ -92,13 +118,16 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .user_item .profile .work :first-child {
   justify-self: flex-start;
-  font-size: 20px;
+  font-size: 15px;
   margin-right: 20px;
 }
 /*# sourceMappingURL=UserList.module.css.map */
