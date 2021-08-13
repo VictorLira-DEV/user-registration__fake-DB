@@ -15,7 +15,7 @@
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
-  height: 450px;
+  min-height: 450px;
   border: 3px solid white;
   overflow-x: scroll;
   scrollbar-width: thin;

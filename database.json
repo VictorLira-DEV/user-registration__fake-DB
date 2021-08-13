@@ -1,11 +1,27 @@
 {
   "users": [
     {
-      "username": "victor dos santos lira",
+      "username": "Victor Dos Santos Lira",
       "email": "victor@gmail.com",
-      "city": "espirito santo",
-      "profession": "desenvolvedor de software",
-      "id": "0.9822582451572179",
+      "city": "Vitória",
+      "profession": "Advogado",
+      "id": "0.9640969201048868",
+      "sex": "male"
+    },
+    {
+      "username": "Cassia Meler",
+      "email": "cassia@gmail.com",
+      "city": "Vitória",
+      "profession": "Ilustrador",
+      "id": "0.4064444340158615",
+      "sex": "male"
+    },
+    {
+      "username": "Marcelo Silva",
+      "email": "marcelo@gmail.com",
+      "city": "Vitória",
+      "profession": "Ator",
+      "id": "0.9054744340858915",
       "sex": "male"
     }
   ],
