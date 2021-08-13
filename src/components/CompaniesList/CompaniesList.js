@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./CompaniesList.module.css";
 import { HiUserGroup } from "react-icons/hi";
 import { BsFillPersonCheckFill } from "react-icons/bs";
+import ProfileOverview from '../UI/ProfileOverview/ProfileOverview';
 import { DiCss3 } from "react-icons/di";
 import { DiRuby } from "react-icons/di";
 import { AiFillHtml5 } from "react-icons/ai";
@@ -9,6 +10,7 @@ import { DiPython } from "react-icons/di";
 import { SiJavascript } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
+import ProfileWrapper from "../UI/ProfileWrapper/ProfileWrapper";
 
 import Button from "../UI/button/Button";
 const CompaniesList = function (props) {
@@ -73,7 +75,7 @@ const CompaniesList = function (props) {
     <React.Fragment>
       {props.list.map((acc) => {
         return (
-          <li className={styles.company_item}>
+          <ProfileWrapper className={styles.profile_wrapper} id={acc.id}>
             <div className={styles.company_profile}>
               <img src={`./${acc.img}.jpg`} alt="avatar" />
               <div className={styles.home}>
@@ -94,17 +96,11 @@ const CompaniesList = function (props) {
                 Overview
               </Button>
             </div>
-            <div
-              onMouseOut={hideCompanyOverview}
-              className={`${styles["overview_company_profile"]} ${
-                companyHover === acc.id &&
-                styles["overview_company_profile--hover"]
-              }  `}
-            >
+            <ProfileOverview onMouseOutHandler={hideCompanyOverview} className={`${acc.id === companyHover && styles['overview_company_profile--hover']}`}>
               <h2>Overview</h2>
               <p>{acc.description}</p>
-            </div>
-          </li>
+            </ProfileOverview>
+          </ProfileWrapper>
         );
       })}
     </React.Fragment>

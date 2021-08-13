@@ -1,30 +1,5 @@
 {
-  "users": [
-    {
-      "username": "adfadfasdf",
-      "email": "adfadf@",
-      "city": "sfdgsdf",
-      "profession": "asdfadsfa",
-      "id": "0.30301953156297046",
-      "sex": "male"
-    },
-    {
-      "username": "adfadfads",
-      "email": "adfadfadsf@",
-      "city": "adsfadsf",
-      "profession": "adfadfa",
-      "id": "0.021388398605481918",
-      "sex": "female"
-    },
-    {
-      "username": "adfadsfadsf",
-      "email": "@ad",
-      "city": "adfadsfasdf",
-      "profession": "adfadsf",
-      "id": "0.24743336108701097",
-      "sex": "male"
-    }
-  ],
+  "users": [],
   "companies": [
     {
       "id": "1",

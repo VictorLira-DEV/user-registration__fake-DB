@@ -6,6 +6,8 @@ import { AiFillFacebook } from "react-icons/ai";
 import { FaBirthdayCake } from "react-icons/fa";
 import styles from "./Founders.module.css";
 import Button from "../UI/button/Button";
+import ProfileOverview from "../UI/ProfileOverview/ProfileOverview";
+import ProfileWrapper from "../UI/ProfileWrapper/ProfileWrapper";
 
 const Founders = function (props) {
   const [hoverEffect, setHoverEffect] = useState("");
@@ -42,15 +44,15 @@ const Founders = function (props) {
     setHoverEffect(e.target.id);
   };
 
-  const hideFoundersOverview = function(){
-    setHoverEffect('');
-  }
+  const hideFoundersOverview = function () {
+    setHoverEffect("");
+  };
 
   return (
     <React.Fragment>
       {props.foundersList.map((acc) => {
         return (
-          <li className={styles.founders_list} style={{ color: "white" }}>
+          <ProfileWrapper className={`${styles.profile_wrapper}`} id={acc.id}>
             <div className={styles.founders_profile}>
               <img src={`./${acc.img}.jpg`} alt="avatar" />
               <div className={styles.home}>
@@ -62,7 +64,11 @@ const Founders = function (props) {
               <div className={styles.company}>
                 {displayIcons(acc.company)} {icons}
               </div>
-              <Button onClick={props.onDisplayModal} id={acc.id} className={styles.about}>
+              <Button
+                onClick={props.onDisplayModal}
+                id={acc.id}
+                className={styles.about}
+              >
                 About
               </Button>
               <Button
@@ -73,17 +79,17 @@ const Founders = function (props) {
                 Overview
               </Button>
             </div>
-            <div
-                onMouseOut={hideFoundersOverview}
-              className={`${styles["overview_founders_profile"]} ${
-                hoverEffect === acc.id &&
+            <ProfileOverview
+              onMouseOutHandler={hideFoundersOverview}
+              className={`${
+                acc.id === hoverEffect &&
                 styles["overview_founders_profile--hover"]
-              } `}
+              }`}
             >
               <h2>Overview</h2>
               <p>{acc.description}</p>
-            </div>
-          </li>
+            </ProfileOverview>
+          </ProfileWrapper>
         );
       })}
     </React.Fragment>

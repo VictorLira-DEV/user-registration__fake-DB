@@ -1,0 +1,17 @@
+.profile_wrapper{
+    background: rgb(49, 50, 51);
+    border: 1px solid rgb(90, 89, 89);
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    color: rgb(226, 210, 188);
+    position: relative;
+  
+    &:hover{
+      background: rgb(56, 57, 58);
+    }
+}

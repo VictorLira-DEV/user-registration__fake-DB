@@ -17,6 +17,9 @@ const Navigation = function () {
         <li className={styles.navigation_item} id="founders" onClick={ctx.onMenuOption}>
           Founders
         </li>
+        <li className={styles.navigation_item} >
+          <input onChange={ctx.onFilter} placeholder="Search user"/>
+        </li>
       </ul>
     </nav>
   );

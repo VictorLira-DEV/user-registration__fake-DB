@@ -1,7 +1,8 @@
 import React from 'react';
 
 const NavContext = React.createContext({
-    onMenuOption: () => {}
+    onMenuOption: () => {},
+    onFilter: () => {}
 });
 
 export default NavContext;

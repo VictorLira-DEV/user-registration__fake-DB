@@ -1,47 +1,9 @@
-.founders_list {
-  background: #313233;
-  border: 1px solid #5a5959;
-  min-width: 200px;
-  max-width: 200px;
-  min-height: 300px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  overflow: hidden;
-  padding-bottom: 10px;
-  color: #e2d2bc;
-  position: relative;
-}
-
-.founders_list:hover {
-  background: #38393a;
-}
-
-.founders_list .overview_founders_profile {
-  background: #fff;
-  color: #22254b;
-  position: absolute;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  padding: 1rem;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: auto;
-  max-height: 100%;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-
-.founders_list .overview_founders_profile.overview_founders_profile--hover {
+.profile_wrapper .overview_founders_profile--hover {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
 
-.founders_list .founders_profile {
+.profile_wrapper .founders_profile {
   max-width: 100%;
   padding: 10px;
   height: 100%;
@@ -60,11 +22,11 @@
           align-items: center;
 }
 
-.founders_list .founders_profile p {
+.profile_wrapper .founders_profile p {
   margin-bottom: 10px;
 }
 
-.founders_list .founders_profile .overview {
+.profile_wrapper .founders_profile .overview {
   width: 90%;
   cursor: pointer;
   margin-top: 10px;
@@ -78,7 +40,7 @@
   border: 1px solid #abfacc;
 }
 
-.founders_list .founders_profile .about {
+.profile_wrapper .founders_profile .about {
   width: 90%;
   cursor: pointer;
   margin-top: 40px;
@@ -92,7 +54,7 @@
   border: 1px solid #abfacc;
 }
 
-.founders_list .founders_profile img {
+.profile_wrapper .founders_profile img {
   width: 130px;
   border: 2px solid white;
   height: 130px;
@@ -102,7 +64,7 @@
   margin-bottom: 10px;
 }
 
-.founders_list .founders_profile .home {
+.profile_wrapper .founders_profile .home {
   width: 100%;
   margin-top: 10px;
   font-size: 14px;
@@ -118,14 +80,14 @@
           align-items: center;
 }
 
-.founders_list .founders_profile .home :first-child {
+.profile_wrapper .founders_profile .home :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;
   color: #e2d2bc;
 }
 
-.founders_list .founders_profile .work {
+.profile_wrapper .founders_profile .work {
   width: 100%;
   color: #e2d2bc;
   font-size: 12px;
@@ -142,13 +104,13 @@
       flex-wrap: wrap;
 }
 
-.founders_list .founders_profile .work :first-child {
+.profile_wrapper .founders_profile .work :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;
 }
 
-.founders_list .founders_profile .company {
+.profile_wrapper .founders_profile .company {
   width: 100%;
   margin-top: 20px;
   font-size: 15px;
@@ -165,7 +127,7 @@
       flex-wrap: wrap;
 }
 
-.founders_list .founders_profile .company :first-child {
+.profile_wrapper .founders_profile .company :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;

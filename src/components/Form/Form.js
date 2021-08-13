@@ -142,8 +142,8 @@ const Form = function (props) {
         "Content-Type": "application/json; charset=UTF-8",
       },
     })
-    .then((response) => response.json())
-    .then((data) => {});
+      .then((response) => response.json())
+      .then((data) => {});
 
     props.onAddingNewUser(
       usersameState.value,

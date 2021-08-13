@@ -3,6 +3,8 @@ import Button from "../UI/button/Button";
 import styles from "./UserList.module.css";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillPersonCheckFill } from "react-icons/bs";
+import ProfileOverview from '../UI/ProfileOverview/ProfileOverview';
+import ProfileWrapper from '../UI/ProfileWrapper/ProfileWrapper';
 
 const UserList = function (props) {
   const [userHover, serUserHover] = useState('')
@@ -25,7 +27,7 @@ const UserList = function (props) {
     <React.Fragment>
       {props.list.map((acc) => {
         return (
-          <li key={acc.id} className={styles.user_item}>
+          <ProfileWrapper key={acc.id} className={styles.profile_wrapper}>
             <div className={styles.profile}>
               <img src={`./${acc.sex}.jpg`} alt="avatar" />
               <p>{acc.username}</p>
@@ -57,11 +59,11 @@ const UserList = function (props) {
                 </Button>
               </div>
             </div>
-            <div onMouseOut={mouseOutHandler} className={`${styles['overview_profile']} ${acc.id === userHover && styles['overview_profile--hover']}  `}> 
-                  <h2>Overview</h2>
-                  <p>{acc.description}</p>
-            </div>
-          </li>
+            <ProfileOverview onMouseOutHandler={mouseOutHandler} className={` ${acc.id === userHover && styles['overview_profile--hover']}`}>
+              <h2>Overview</h2>
+              <p>{acc.description}</p>
+            </ProfileOverview>
+          </ProfileWrapper>
         );
       })}
     </React.Fragment>

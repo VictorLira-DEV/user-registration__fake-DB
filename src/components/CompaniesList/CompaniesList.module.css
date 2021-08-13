@@ -1,51 +1,13 @@
-.company_item {
-  background: #313233;
-  border: 1px solid #5a5959;
-  min-width: 200px;
-  max-width: 200px;
-  min-height: 300px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  overflow: hidden;
-  padding-bottom: 10px;
-  color: #e2d2bc;
-  position: relative;
-}
-
-.company_item:hover {
-  background: #38393a;
-}
-
-.company_item .overview_company_profile {
-  background: #fff;
-  color: #22254b;
-  position: absolute;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  padding: 1rem;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: auto;
-  max-height: 100%;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-
-.company_item .overview_company_profile.overview_company_profile--hover {
+.profile_wrapper .overview_company_profile--hover {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
 
-.company_item:not(:last-child) {
+.profile_wrapper:not(:last-child) {
   margin-right: 10px;
 }
 
-.company_item .company_profile {
+.profile_wrapper .company_profile {
   max-width: 100%;
   padding: 10px;
   height: 100%;
@@ -64,11 +26,11 @@
           align-items: center;
 }
 
-.company_item .company_profile p {
+.profile_wrapper .company_profile p {
   margin-bottom: 10px;
 }
 
-.company_item .company_profile .overview {
+.profile_wrapper .company_profile .overview {
   width: 90%;
   cursor: pointer;
   margin-top: 10px;
@@ -76,13 +38,13 @@
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   padding: 5px 10px;
-  color: white;
+  color: inherit;
   font-size: 14px;
   background: #2fb62f;
   border: 1px solid #abfacc;
 }
 
-.company_item .company_profile img {
+.profile_wrapper .company_profile img {
   width: 130px;
   border: 2px solid white;
   height: 130px;
@@ -92,10 +54,9 @@
   margin-bottom: 10px;
 }
 
-.company_item .company_profile .home {
+.profile_wrapper .company_profile .home {
   width: 150px;
   margin-top: 10px;
-  color: #e2d2bc;
   font-size: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,15 +71,14 @@
       flex-wrap: wrap;
 }
 
-.company_item .company_profile .home :first-child {
+.profile_wrapper .company_profile .home :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;
 }
 
-.company_item .company_profile .work {
+.profile_wrapper .company_profile .work {
   width: 150px;
-  color: #e2d2bc;
   font-size: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,13 +93,13 @@
       flex-wrap: wrap;
 }
 
-.company_item .company_profile .work :first-child {
+.profile_wrapper .company_profile .work :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;
 }
 
-.company_item .company_profile .tech {
+.profile_wrapper .company_profile .tech {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,7 +114,7 @@
   margin: 20px 0 20px 0;
 }
 
-.company_item .company_profile .tech .tech_img {
+.profile_wrapper .company_profile .tech .tech_img {
   margin: 0;
   width: 30px;
   height: 30px;

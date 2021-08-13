@@ -16,4 +16,11 @@
 .navigation .navigation_item:not(:last-child) {
   margin-right: 20px;
 }
+
+.navigation .navigation_item input {
+  padding: 3px;
+  border-radius: 10px;
+  border: none;
+  background: white;
+}
 /*# sourceMappingURL=Navigation.module.css.map */
