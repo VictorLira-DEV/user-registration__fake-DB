@@ -1,0 +1,66 @@
+.backdrop {
+  width: 100VW;
+  height: 100vh;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.modal {
+  background: white;
+  position: fixed;
+  z-index: 20;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 500px;
+  border-radius: 6px;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.modal header {
+  padding: 10px 20px;
+  background: #8f248f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  text-align: justify;
+}
+
+.modal header :nth-child(2) {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.modal section {
+  padding: 40px;
+}
+
+.modal section :nth-child(3) {
+  margin-top: 10px;
+  color: red;
+}
+
+.modal section h1 {
+  margin-bottom: 10px;
+}
+
+.modal section p {
+  text-align: justify;
+}
+/*# sourceMappingURL=InformationModal.css.map */

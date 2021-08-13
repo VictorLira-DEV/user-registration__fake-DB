@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./CompaniesList.module.css";
 import { HiUserGroup } from "react-icons/hi";
 import { BsFillPersonCheckFill } from "react-icons/bs";
@@ -11,17 +11,15 @@ import { SiTypescript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 
 import Button from "../UI/button/Button";
-
 const CompaniesList = function (props) {
-    const [companyHover, setCompanyHover] = useState('')
-
+  const [companyHover, setCompanyHover] = useState("");
 
   let icons = "";
   const displayIcons = function (name) {
     if (name === "Spotify") {
       icons = (
         <>
-          <img className={styles.tech_img} src="c++.png" alt="logo"/>
+          <img className={styles.tech_img} src="c++.png" alt="logo" />
           <DiRuby style={{ color: "rgb(224, 166, 162)", fontSize: "1.5rem" }} />
           <SiJavascript style={{ color: "yellow", fontSize: "1.5rem" }} />
           <AiFillHtml5
@@ -35,7 +33,7 @@ const CompaniesList = function (props) {
       icons = (
         <>
           <FaReact style={{ color: "rgb(74, 213, 254)", fontSize: "1.5rem" }} />
-          <SiJavascript style={{ color: "yellow", fontSize: "1.5rem" }} />
+          <SiJavascript style={{ color: "yellow", fontSize: "1.5rem",  }} />
           <SiTypescript
             style={{ color: "rgb(45, 121, 199)", fontSize: "1.5rem" }}
           />
@@ -50,7 +48,7 @@ const CompaniesList = function (props) {
     if (name === "Google") {
       icons = (
         <>
-          <img className={styles.tech_img} src="c++.png" alt="logo"/>
+          <img className={styles.tech_img} src="c++.png" alt="logo" />
           <DiPython style={{ color: "yellow", fontSize: "1.5rem" }} />
           <SiJavascript style={{ color: "yellow", fontSize: "1.5rem" }} />
           <AiFillHtml5
@@ -62,17 +60,14 @@ const CompaniesList = function (props) {
     }
   };
 
-  const displayCompanyOverview = function(e){
+  const displayCompanyOverview = function (e) {
     e.preventDefault();
-    setCompanyHover(e.target.id)
-  }
+    setCompanyHover(e.target.id);
+  };
 
-  const hideCompanyOverview = function(){
-    setCompanyHover('')
-  }
-
-  
-
+  const hideCompanyOverview = function () {
+    setCompanyHover("");
+  };
 
   return (
     <React.Fragment>
@@ -91,11 +86,23 @@ const CompaniesList = function (props) {
                 {displayIcons(acc.name)}
                 {icons}
               </div>
-              <Button id={acc.id} onClick={displayCompanyOverview} className={styles.overview}>Overview</Button>
+              <Button
+                id={acc.id}
+                onClick={displayCompanyOverview}
+                className={styles.overview}
+              >
+                Overview
+              </Button>
             </div>
-            <div onMouseOut={hideCompanyOverview} className={`${styles['overview_company_profile']} ${companyHover === acc.id && styles['overview_company_profile--hover']}  `}> 
-                  <h2>Overview</h2>
-                  <p>{acc.description}</p>
+            <div
+              onMouseOut={hideCompanyOverview}
+              className={`${styles["overview_company_profile"]} ${
+                companyHover === acc.id &&
+                styles["overview_company_profile--hover"]
+              }  `}
+            >
+              <h2>Overview</h2>
+              <p>{acc.description}</p>
             </div>
           </li>
         );

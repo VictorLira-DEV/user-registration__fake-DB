@@ -12,6 +12,10 @@
   position: relative;
 }
 
+.user_item:hover {
+  background: #38393a;
+}
+
 .user_item .overview_profile {
   background: #fff;
   color: #22254b;

@@ -11,6 +11,10 @@
   color: rgb(226, 210, 188);
   position: relative;
 
+  &:hover{
+    background: rgb(56, 57, 58);
+  }
+
   .overview_company_profile {
     background: #fff;
     color: #22254b;
@@ -71,6 +75,7 @@
     }
     .home {
       width: 150px;
+      margin-top: 10px;
       color: rgb(226, 210, 188);
       font-size: 15px;
       display: flex;
@@ -87,7 +92,7 @@
     .work {
       width: 150px;
       color: rgb(226, 210, 188);
-      font-size: 15px;
+      font-size: 12px;
       display: flex;
       justify-content: flex-start;
       align-items: center;

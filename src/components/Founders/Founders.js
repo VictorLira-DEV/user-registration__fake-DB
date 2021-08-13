@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiUserGroup } from "react-icons/hi";
 import { FaSpotify } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -8,6 +8,8 @@ import styles from "./Founders.module.css";
 import Button from "../UI/button/Button";
 
 const Founders = function (props) {
+  const [hoverEffect, setHoverEffect] = useState("");
+
   let icons = "";
   const displayIcons = function (currentIcon) {
     if (currentIcon === "Spotify") {
@@ -34,6 +36,16 @@ const Founders = function (props) {
       );
     }
   };
+
+  const displayFoundersOverview = function (e) {
+    e.preventDefault();
+    setHoverEffect(e.target.id);
+  };
+
+  const hideFoundersOverview = function(){
+    setHoverEffect('');
+  }
+
   return (
     <React.Fragment>
       {props.foundersList.map((acc) => {
@@ -47,21 +59,29 @@ const Founders = function (props) {
               <div className={styles.work}>
                 <FaBirthdayCake /> <span>{acc.year} </span>
               </div>
-              <div className={styles.company}>{displayIcons(acc.company)} {icons}</div>
+              <div className={styles.company}>
+                {displayIcons(acc.company)} {icons}
+              </div>
+              <Button onClick={props.onDisplayModal} id={acc.id} className={styles.about}>
+                About
+              </Button>
               <Button
                 id={acc.id}
-                // onClick={displayCompanyOverview}
+                onClick={displayFoundersOverview}
                 className={styles.overview}
               >
                 Overview
               </Button>
-              <Button
-                id={acc.id}
-                // onClick={displayCompanyOverview}
-                className={styles.about}
-              >
-                About
-              </Button>
+            </div>
+            <div
+                onMouseOut={hideFoundersOverview}
+              className={`${styles["overview_founders_profile"]} ${
+                hoverEffect === acc.id &&
+                styles["overview_founders_profile--hover"]
+              } `}
+            >
+              <h2>Overview</h2>
+              <p>{acc.description}</p>
             </div>
           </li>
         );

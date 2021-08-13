@@ -12,6 +12,35 @@
   position: relative;
 }
 
+.founders_list:hover {
+  background: #38393a;
+}
+
+.founders_list .overview_founders_profile {
+  background: #fff;
+  color: #22254b;
+  position: absolute;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: 1rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  max-height: 100%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.founders_list .overview_founders_profile.overview_founders_profile--hover {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
 .founders_list .founders_profile {
   max-width: 100%;
   padding: 10px;
@@ -47,13 +76,12 @@
   font-size: 14px;
   background: #2fb62f;
   border: 1px solid #abfacc;
-  margin-top: 40px;
 }
 
 .founders_list .founders_profile .about {
   width: 90%;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 40px;
   border-radius: 4px;
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
@@ -79,7 +107,6 @@
   margin-top: 10px;
   font-size: 14px;
   color: #e2d2bc;
-  margin-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,7 +128,7 @@
 .founders_list .founders_profile .work {
   width: 100%;
   color: #e2d2bc;
-  font-size: 15px;
+  font-size: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -12,6 +12,10 @@
   position: relative;
 }
 
+.company_item:hover {
+  background: #38393a;
+}
+
 .company_item .overview_company_profile {
   background: #fff;
   color: #22254b;
@@ -90,6 +94,7 @@
 
 .company_item .company_profile .home {
   width: 150px;
+  margin-top: 10px;
   color: #e2d2bc;
   font-size: 15px;
   display: -webkit-box;
@@ -114,7 +119,7 @@
 .company_item .company_profile .work {
   width: 150px;
   color: #e2d2bc;
-  font-size: 15px;
+  font-size: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

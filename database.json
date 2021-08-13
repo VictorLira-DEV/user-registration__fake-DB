@@ -1,29 +1,27 @@
 {
   "users": [
     {
-      "username": "adfasdf",
-      "email": "dsafadsf@asdf",
-      "city": "adfadsfadf",
-      "profession": "adsfadsfasd",
-      "id": "0.811648828278833",
-      "sex": "female",
-      "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
+      "username": "adfadfasdf",
+      "email": "adfadf@",
+      "city": "sfdgsdf",
+      "profession": "asdfadsfa",
+      "id": "0.30301953156297046",
+      "sex": "male"
     },
     {
-      "username": "adfasdf",
-      "email": "dsafadsf@asdf",
-      "city": "adfadsfadf",
-      "profession": "adsfadsfasd",
-      "id": "0.811648828d278833",
-      "sex": "female",
-      "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
+      "username": "adfadfads",
+      "email": "adfadfadsf@",
+      "city": "adsfadsf",
+      "profession": "adfadfa",
+      "id": "0.021388398605481918",
+      "sex": "female"
     },
     {
-      "username": "Marcos",
-      "email": "Marcos@gmail.com",
-      "city": "cariacica",
-      "profession": "medico",
-      "id": "0.9021901222908788",
+      "username": "adfadsfadsf",
+      "email": "@ad",
+      "city": "adfadsfasdf",
+      "profession": "adfadsf",
+      "id": "0.24743336108701097",
       "sex": "male"
     }
   ],
@@ -31,21 +29,21 @@
     {
       "id": "1",
       "name": "Spotify",
-      "year": "12/03/1997",
+      "year": "07/10/2008",
       "img": "spotify",
       "description": "Apple Inc. is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, computer software, and online services. ... Its online services include the iTunes Store, the iOS App Store and Mac App Store, Apple Music, and iCloud"
     },
     {
       "id": "2",
       "name": "Google",
-      "year": "12/03/1997",
+      "year": "04/09/1998",
       "img": "google",
       "description": "Microsoft Corporation, incorporated on September 22, 1993, is a technology company. The Company develops, licenses, and supports a range of software products, services and devices. The Company's segments include Productivity and Business Processes, Intelligent Cloud and More Personal Computing"
     },
     {
       "id": "3",
       "name": "Facebook",
-      "year": "12/03/1997",
+      "year": "4/02/2004",
       "img": "facebook",
       "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
     }
@@ -55,25 +53,25 @@
       "id": "c1",
       "name": "Mark Zuckerberg",
       "company": "Facebook",
-      "year": "12/03/1997",
+      "year": "14/05/1984",
       "img": "mark",
-      "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
+      "description": "Mark Elliot Zuckerberg is an American media magnate, internet entrepreneur, and philanthropist. He is known for co-founding Facebook, Inc. and serves as its chairman, chief executive officer, and controlling shareholder. He also is a co-founder of the solar sail spacecraft development project Breakthrough Starshot and serves as one of its board members. Born in White Plains, New York, Zuckerberg attended Harvard University, where he launched the Facebook social networking service from his dormitory room on February 4, 2004, with college roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes. Originally launched to select college campuses, the site expanded rapidly and eventually beyond colleges, reaching one billion users by 2012. Zuckerberg took the company public in May 2012 with majority shares. In 2007, at age 23, he became the world's youngest self-made billionaire. As of July 2021, Zuckerberg's net worth is $132 billion, making him the 5th-richest person in the world. Since 2008, Time magazine has named Zuckerberg among the 100 most influential people in the world as a part of its Person of the Year award. In December 2016, Zuckerberg was ranked 10th on Forbes list of The World's Most Powerful People."
     },
     {
       "id": "cdf1",
       "name": "Larry Page",
       "company": "Google",
-      "year": "12/03/1997",
+      "year": "26/03/1973",
       "img": "larry",
-      "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
+      "description": "Lawrence Edward Page 'born March 26, 1973' is an American business magnate, computer scientist and Internet entrepreneur. He is best known as one of the co-founders of Google along with Sergey Brin. Page was the chief executive officer of Google from 1997 until August 2001 (stepping down in favor of Eric Schmidt then from April 2011 until July 2015 when he moved to become CEO of Alphabet Inc. created to deliver  as Google's parent company, a post he held until December 4, 2019. He remains an Alphabet board member, employee, and controlling shareholder. Creating Google built a significant amount of wealth. According to Bloomberg Billionaires Index, as of June 25, 2021, Page has a net worth of approximately $112.5 billion, making him the 6th-wealthiest person in the world. Page is the co-creator and namesake of PageRank, a search ranking algorithm for Google. He received the Marconi Prize in 2004 with co-writer Brin."
     },
     {
       "id": "dfc1",
       "name": "Daniel Ek",
       "company": "Spotify",
-      "year": "12/03/1997",
+      "year": "21/02/1983",
       "img": "daniel",
-      "description": "Google was founded by Larry Page and Sergey Brin while they were students at Stanford University. The company was officially launched in September, 1998 in a friend's garage. ... The official mission statement of the company is to “organize the world's information and make it universally accessible and useful"
+      "description": "Ek's first foray into the business world began at age 13 when he started a business making websites for clients from his home. He charged the first client $100, but then charged the next client who asked $200. Eventually, he started charging $5,000 per website. To help expand the business, Ek recruited students from his class to work on the websites from the school computer lab by bribing them with video games. His earnings eventually reached $50,000 per month and by age 18 he was managing a team of 25. Ek's parents started to notice his earnings once he started bringing home large TVs. Ek later served in a senior role at Nordic auction company Tradera which was acquired by eBay in 2006. Ek also served as the CTO of browser based game and fashion community Stardoll. Ek later started another company Advertigo, an online advertising company. Advertigo sold to TradeDoubler in 2006. After selling Advertigo, Ek briefly became the CEO of μTorrent, working with μTorrent founder Ludvig Strigeus. This ended when μTorrent was sold to BitTorrent on December 7 of 2006. Strigeus would later join Ek as a Spotify developer."
     }
   ]
 }

@@ -7,13 +7,15 @@ import Founders from './components/Founders/Founders';
 import Footer from "./components/Footer/Footer";
 import ListWrapper from "./components/ListWrapper/ListWrapper";
 import { useState, useEffect } from "react";
-
+import InformationModal from '../src/components/InformationModal/InformationList'
 import NavContext from './components/context/navcontext';
 
 function App() {
   const [username, setUsername] = useState([]);
   const [companiesList, setCompaniesList] = useState([]);
-  const [founders, setFounders] = useState([])
+  const [founders, setFounders] = useState([]);
+  const [displayModal, setDisplayModal] = useState(false);
+  const [modalCurrentUser, setModalCurrentUser] = useState({});
   const [menu, menuState] = useState("users");
   useEffect(() => {
     let account = [];
@@ -81,19 +83,38 @@ function App() {
     menuState(e.target.id)
   }
 
+  const displayInfoModal = function(e){
+    setDisplayModal(true)
+    // let name;
+    // let content;
+
+    founders.forEach((acc) => {
+      if(acc.id === e.target.id){
+        setModalCurrentUser({name: acc.name, bio: acc.description})
+      }
+    })
+  }
+
+  const closeModal = function(){
+    setDisplayModal(false)
+  }
+
   return (
-    <NavContext.Provider value={{onMenuOption: menuOption}}>
-      <Header />
-      <div className="wrapper">
-        <Form onAddingNewUser={addingNewUser} />
-        <ListWrapper>
-          {menu === 'companies' && <CompaniesList list={companiesList} />}
-          {menu === 'users' &&  <UserList list={username} onRemoveAccount={removeAccount} />}
-          {menu === 'founders' &&  <Founders foundersList={founders} />}
-        </ListWrapper>
-      </div>
-      <Footer />
-    </NavContext.Provider>
+    <React.Fragment>
+      <NavContext.Provider value={{onMenuOption: menuOption}}>
+        <Header />
+        <div className="wrapper">
+          <Form onAddingNewUser={addingNewUser} />
+          <ListWrapper>
+            {menu === 'companies' && <CompaniesList list={companiesList} />}
+            {menu === 'users' &&  <UserList list={username} onRemoveAccount={removeAccount} />}
+            {menu === 'founders' &&  <Founders foundersList={founders} onDisplayModal={displayInfoModal} />}
+          </ListWrapper>
+        </div>
+        <Footer />
+      </NavContext.Provider>
+      {displayModal && <InformationModal onCloseModal={closeModal} currentUserModal={modalCurrentUser}/>}
+    </React.Fragment>
   );
 }
 

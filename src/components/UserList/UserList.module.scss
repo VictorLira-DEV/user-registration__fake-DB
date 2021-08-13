@@ -11,7 +11,9 @@
   color: rgb(226, 210, 188);
   position: relative;
 
-  
+  &:hover{
+    background: rgb(56, 57, 58);
+  }
 
   .overview_profile {
     background: #fff;
