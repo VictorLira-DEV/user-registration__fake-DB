@@ -1,5 +1,14 @@
 {
-  "users": [],
+  "users": [
+    {
+      "username": "victor dos santos lira",
+      "email": "victor@gmail.com",
+      "city": "espirito santo",
+      "profession": "desenvolvedor de software",
+      "id": "0.9822582451572179",
+      "sex": "male"
+    }
+  ],
   "companies": [
     {
       "id": "1",

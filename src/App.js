@@ -44,21 +44,32 @@ function App() {
       });
   }, [menu]);
 
+  const capitalizeName = function(currentName){
+    const names = currentName.split(' ');
+    const namesUpper = [];
+    for (const n of names){
+      namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    }
+    const capitalizeName = namesUpper.join(' ');
+    return capitalizeName
+  }
+
   const addingNewUser = function (
     uName,
     uEmail,
     uMunicipio,
-    uProfissao,
+    uProfission,
     randomID,
     userSex
   ) {
+    
     setUserListState((prev) => {
       const previous = [...prev];
       previous.unshift({
-        username: uName,
+        username: capitalizeName(uName),
         email: uEmail,
-        city: uMunicipio,
-        profession: uProfissao,
+        city: capitalizeName(uMunicipio),
+        profession: capitalizeName(uProfission),
         id: randomID,
         sex: userSex,
       });

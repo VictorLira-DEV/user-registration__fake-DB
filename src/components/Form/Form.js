@@ -124,17 +124,31 @@ const Form = function (props) {
     dispatchProfessionState({ type: "USER_BLUR" });
   };
 
+  const removeBigWhiteSpace = function(name){
+    const inputValue = name.toLowerCase().replaceAll(/\s+/g, '+').split('+');
+    const inputValueFormated = inputValue.join(' ').trim();
+    return inputValueFormated;
+  }
+
+
   const addUser = function (e) {
     e.preventDefault();
+    removeBigWhiteSpace(usersameState.value)
+
+    const uName = removeBigWhiteSpace(usersameState.value)
+    const uEmail = emailState.value.trim();
+    const uCity = removeBigWhiteSpace(cityState.value)
+    const uProfession = removeBigWhiteSpace(professionState.value)
+
     if (isFormValid !== true) return;
     let randomID = Math.random().toString(); //RANDOM ID
     fetch("http://localhost:3004/users", {
       method: "POST",
       body: JSON.stringify({
-        username: usersameState.value,
-        email: emailState.value,
-        city: cityState.value,
-        profession: professionState.value,
+        username: uName,
+        email: uEmail,
+        city: uCity,
+        profession: uProfession,
         id: randomID,
         sex: userSex,
       }),
@@ -146,10 +160,10 @@ const Form = function (props) {
       .then((data) => {});
 
     props.onAddingNewUser(
-      usersameState.value,
-      emailState.value,
-      cityState.value,
-      professionState.value,
+      uName,
+      uEmail,
+      uCity,
+      uProfession,
       randomID,
       userSex
     );
