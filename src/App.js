@@ -98,8 +98,15 @@ function App() {
         setDisplayModal(false);
     };
 
+    const [userFilter, setUserState] = useState('');
+
     const filter = function (e) {
-        fetch(`http://localhost:3004/users?username=${e.target.value}`)
+        setUserState(e.target.value)
+    };
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            fetch(`http://localhost:3004/users?username=${userFilter    }`)
             .then((response) => response.json())
             .then((json) => {
                 if (json.length > 0) {
@@ -118,7 +125,12 @@ function App() {
                         });
                 }
             });
-    };
+        }, 1000);
+
+        return () => {
+            clearTimeout(timer);
+        };
+    }, [userFilter])
 
     return (
         <React.Fragment>

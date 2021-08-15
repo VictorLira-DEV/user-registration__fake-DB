@@ -5,5 +5,15 @@
   width: 100%;
   position: fixed;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer :first-child {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=Footer.module.css.map */

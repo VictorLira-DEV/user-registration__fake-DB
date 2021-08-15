@@ -10,11 +10,21 @@
         cursor: pointer;
 
         input{
-            padding: 3px;
+            padding: 3px 5px;
             border-radius: 10px;
             border: none;
-            background: rgb(223, 223, 223);
-            color: white;
+            background: #b494c0;
+            
+        }
+
+        &:hover{
+            color: rgb(204, 204, 204);
+            text-decoration: underline;
         }
     }
 }
+
+::placeholder{
+    color: rgb(226, 226, 226);
+  }
+  

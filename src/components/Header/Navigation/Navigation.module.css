@@ -18,10 +18,30 @@
 }
 
 .navigation .navigation_item input {
-  padding: 3px;
+  padding: 3px 5px;
   border-radius: 10px;
   border: none;
-  background: #dfdfdf;
-  color: white;
+  background: #b494c0;
+}
+
+.navigation .navigation_item:hover {
+  color: #cccccc;
+  text-decoration: underline;
+}
+
+::-webkit-input-placeholder {
+  color: #e2e2e2;
+}
+
+:-ms-input-placeholder {
+  color: #e2e2e2;
+}
+
+::-ms-input-placeholder {
+  color: #e2e2e2;
+}
+
+::placeholder {
+  color: #e2e2e2;
 }
 /*# sourceMappingURL=Navigation.module.css.map */
