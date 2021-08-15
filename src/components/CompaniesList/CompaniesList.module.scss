@@ -1,3 +1,5 @@
+@import '../../SCSS-Variables/Variables';
+
 .profile_wrapper {
     .overview_company_profile--hover {
       transform: translateY(0%);
@@ -31,13 +33,13 @@
       padding: 5px 10px;
       color: inherit;
       font-size: 14px;
-      background: rgb(47, 182, 47);
-      border: 1px solid rgb(171, 250, 204);
+      background: $light-green;
+      border: 1px solid $dark-green;
     }
 
     img {
       width: 130px;
-      border: 2px solid white;
+      border: 2px solid $white;
       height: 130px;
       border-radius: 100%;
       object-fit: cover;

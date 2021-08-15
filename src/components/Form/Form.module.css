@@ -20,6 +20,7 @@
           justify-content: space-evenly;
   padding: 10px;
   margin-bottom: 10px;
+  color: #535353;
 }
 
 .form .sex div label {
@@ -67,7 +68,7 @@
 }
 
 .form .btn_submit {
-  color: #fff;
+  color: white;
   display: block;
   width: 100%;
   padding: 10px;

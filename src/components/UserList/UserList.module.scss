@@ -1,3 +1,5 @@
+@import '../../SCSS-Variables/Variables';
+
 .profile_wrapper {
   .overview_profile--hover {
     transform: translateY(0%);
@@ -31,13 +33,13 @@
       font-size: 14px;
 
       &.remove {
-        background: rgb(248, 68, 68);
-        border: 1px solid red;
+        background: $light-red;
+        border: 1px solid $dark-red;
       }
 
       &.overview {
-        background: rgb(47, 182, 47);
-        border: 1px solid rgb(36, 192, 101);
+        background: $light-green;
+        border: 1px solid $dark-green;
       }
     }
     img {

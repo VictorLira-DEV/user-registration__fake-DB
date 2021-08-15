@@ -1,7 +1,9 @@
+@import '../../SCSS-Variables/Variables';
+
 .header{
     padding: 10px 40px ;
-    background: rgb(82, 0, 129);
-    color: white;
+    background: $dark-purple;
+    color: $white;
     display: flex;
     justify-content: space-between;
     align-items: center;

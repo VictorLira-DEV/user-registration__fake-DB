@@ -1,3 +1,5 @@
+@import '../../SCSS-Variables/Variables';
+
 .profile_wrapper {
 
     .overview_founders_profile--hover {
@@ -26,10 +28,10 @@
       border-radius: 4px;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
       padding: 5px 10px;
-      color: white;
+      color: $white;
       font-size: 14px;
-      background: rgb(47, 182, 47);
-      border: 1px solid rgb(171, 250, 204);
+      background: $light-green;
+      border: 1px solid $dark-green;
     }
 
     .about {
@@ -39,15 +41,15 @@
       border-radius: 4px;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
       padding: 5px 10px;
-      color: white;
+      color: $white;
       font-size: 14px;
-      background: rgb(47, 173, 182);
-      border: 1px solid rgb(171, 250, 204);
+      background: $light-blue;
+      border: 1px solid $dark-blue;
     }
 
     img {
       width: 130px;
-      border: 2px solid white;
+      border: 2px solid $white;
       height: 130px;
       border-radius: 100%;
       object-fit: cover;

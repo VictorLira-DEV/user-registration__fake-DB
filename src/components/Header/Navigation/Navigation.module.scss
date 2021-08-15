@@ -1,3 +1,5 @@
+@import '../../../SCSS-Variables/Variables';
+
 .navigation{
     display: flex;
     align-items: center;
@@ -6,7 +8,7 @@
         &:not(:last-child){
             margin-right: 20px;
         }
-        color: white;
+        color: $white;
         cursor: pointer;
 
         input{
@@ -18,8 +20,9 @@
         }
 
         &:hover{
-            color: rgb(204, 204, 204);
+            color: rgb(230, 230, 230);
             text-decoration: underline;
+            transition: 1s;
         }
     }
 }

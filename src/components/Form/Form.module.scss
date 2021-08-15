@@ -1,7 +1,9 @@
+@import '../../SCSS-Variables/Variables';
+
 .form {
   width: 400px;
   padding: 30px 40px;
-  background-color: white;
+  background-color: $white;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 
@@ -14,6 +16,7 @@
     justify-content: space-evenly;
     padding: 10px;
     margin-bottom: 10px;
+    color: $form-text;
     div{
       label{
         margin-right: 10px;
@@ -22,14 +25,14 @@
   }
 
   .form_control {
-    color: rgb(83, 83, 83);
+    color: $form-text;
     width: 100%;
     display: flex;
     flex-direction: column;
     padding-bottom: 15px;
     margin-bottom: 10px;
     textarea{
-      border: 1px solid #ccc;
+      border: 1px solid $input-border;
       max-width: 100%;
       height: 70px;
       max-height:70px;
@@ -56,12 +59,12 @@
 
     input {
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid $input-border;
     }
   }
 
   .btn_submit {
-    color: #fff;
+    color: $white;
     display: block;
     width: 100%;
     padding: 10px;

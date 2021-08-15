@@ -1,7 +1,9 @@
+@import '../../SCSS-Variables/Variables';
+
 .footer{
     padding: 10px 40px ;
-    background: rgb(82, 0, 129);
-    color: white;
+    background: $dark-purple;
+    color: $white;
     width: 100%;
     position: fixed;
     bottom: 0;
