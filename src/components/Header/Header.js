@@ -3,7 +3,7 @@ import Navigation from "./Navigation/Navigation";
 const Header = function () {
     return (
         <header className={styles.header}>
-            <h2>React</h2>
+            <img src="./logo.svg"></img>
             <Navigation />
         </header>
     );

@@ -1,10 +1,66 @@
 .footer {
-  padding: 10px 40px;
-  background: #520081;
+  padding: 20px 40px  60px 40px;
+  background: #181e2a;
   color: white;
   width: 100%;
-  position: fixed;
-  bottom: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.footer .footer_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .footer_logo :first-child {
+  margin-right: 30px;
+}
+
+.footer :first-child {
+  margin-right: 10px;
+}
+
+.footer .footerWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  width: 100%;
+}
+
+.footer .footerWrapper .footer1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+}
+
+.footer .footerWrapper .footer1 > div:first-child {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-right: 30px;
+}
+
+.footer .footerWrapper .footer1 .phone .cell,
+.footer .footerWrapper .footer1 .phone .email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,7 +69,104 @@
           align-items: center;
 }
 
-.footer :first-child {
+.footer .footerWrapper .footer2 {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footer .footerWrapper .footer2 ul {
+  list-style: none;
+}
+
+.footer .footerWrapper .footer2 ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer .footerWrapper .footer2 .social_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footerWrapper .footer2 .social_media > div:not(:last-child) {
   margin-right: 10px;
+}
+
+@media screen and (max-width: 1135px) {
+  .footer {
+    padding: 200px 30px 100px 30px;
+  }
+}
+
+@media screen and (max-width: 823px) {
+  .footer .footerWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footerWrapper .footer1 {
+    width: 100%;
+  }
+  .footer .footerWrapper .footer2 {
+    margin-top: 50px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+  .footer .footerWrapper .footer2 :not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 557px) {
+  .footer .footerWrapper .footer1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footerWrapper .footer1 > div:first-child {
+    width: 100%;
+  }
+  .footer .footerWrapper .footer1 .phone {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    padding: 200px 30px 50px 30px;
+  }
+  .footer .footerWrapper .footer2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footerWrapper .footer2 .terms {
+    margin-top: 50px;
+  }
+  .footer .footerWrapper .footer2 .social_media {
+    margin-top: 100px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 /*# sourceMappingURL=Footer.module.css.map */

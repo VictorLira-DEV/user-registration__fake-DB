@@ -78,14 +78,10 @@
   transition: 0.4s;
 }
 
-.form .btn_submit:hover {
-  background-color: #7b319b;
-}
-
 .form .btn_submit.enabled {
   cursor: pointer;
-  background-color: #8e44ad;
-  border: 1px solid #8e44ad;
+  background-color: #42afcf;
+  border: 1px solid #20a6cf;
 }
 
 .form .btn_submit.disabled {

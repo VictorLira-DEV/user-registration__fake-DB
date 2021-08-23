@@ -71,14 +71,14 @@
     border-radius: 4px;
     font-size: 16px;
     transition: 0.4s;
-    &:hover {
-      background-color: #7b319b;
-    }
+    // &:hover {
+    //   background-color: rgb(197, 219, 226);
+    // }
 
     &.enabled{
       cursor: pointer;
-      background-color: #8e44ad;
-      border: 1px solid #8e44ad;
+      background-color: rgb(66, 175, 207);
+      border: 1px solid rgb(32, 166, 207);
     }
 
     &.disabled{

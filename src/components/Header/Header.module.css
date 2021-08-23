@@ -1,6 +1,6 @@
 .header {
-  padding: 10px 40px;
-  background: #520081;
+  padding: 20px 40px;
+  background: #181e2a;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,5 +11,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header img {
+  width: 150px;
 }
 /*# sourceMappingURL=Header.module.css.map */

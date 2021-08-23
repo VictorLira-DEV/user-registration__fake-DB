@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
-body {
-  background-color: #9b59b6;
-}
-
 *{
   margin: 0;
   padding: 0;
@@ -12,11 +8,16 @@ body {
   outline: none;
 }
 
+
 .wrapper{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 40px;
+  background-color: rgb(28, 34, 48);
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 0;
 }
 
 

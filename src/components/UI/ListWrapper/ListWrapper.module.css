@@ -1,5 +1,5 @@
 .list_wrapper {
-  background-color: #1a181a;
+  background-color: #181e2a;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
   list-style: none;
@@ -16,7 +16,7 @@
           align-items: center;
   border-radius: 5px;
   min-height: 450px;
-  border: 3px solid white;
+  border: 3px solid #616774;
   overflow-x: scroll;
   scrollbar-width: thin;
 }

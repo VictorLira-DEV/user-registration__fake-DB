@@ -18,10 +18,12 @@
 }
 
 .navigation .navigation_item input {
-  padding: 3px 5px;
+  padding: 4px 10px;
   border-radius: 10px;
+  color: white;
   border: none;
-  background: #b494c0;
+  background-color: #343a47;
+  border: 1px solid #596170;
 }
 
 .navigation .navigation_item:hover {
