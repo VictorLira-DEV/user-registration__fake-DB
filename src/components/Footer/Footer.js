@@ -19,7 +19,6 @@ const Footer = function () {
             <div className={styles.footerWrapper}>
                 <div className={styles.footer1}>
                     <div>
-                        {/* <img src="./images/icon-location.svg" alt="" /> */}
                         <ImLocation style={{fontSize: '40px'}}/>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -30,11 +29,9 @@ const Footer = function () {
                     <div className={styles.phone}>
                         <div className={styles.cell}>
                             <AiFillPhone/>
-                            {/* <img src="./images/icon-phone.svg" alt="" /> */}
                             <p>+1-543-123-4567</p>
                         </div>
                         <div className={styles.email}>
-                            {/* <img src="./images/icon-email.svg" alt="" /> */}
                             <MdEmail/>
                             <p>example@fylo.com</p>
                         </div>

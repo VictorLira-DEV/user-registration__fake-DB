@@ -1,5 +1,5 @@
 .profile_wrapper {
-  background: #313233;
+  background: #1c2230;
   border: 1px solid #596170;
   min-width: 200px;
   max-width: 200px;
@@ -13,6 +13,6 @@
 }
 
 .profile_wrapper:hover {
-  background: #38393a;
+  background: #252c3b;
 }
 /*# sourceMappingURL=ProfileWrapper.module.css.map */
