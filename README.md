@@ -30,6 +30,8 @@ I've developed this app using an Fake API called Json Placeholder you can find i
 - [x] Form validation
 - [x] Add and remove User
 - [x] Login in
+- [x] User overview
+- [x] founders modal
 
 
 ## :rocket: Technologies used:
