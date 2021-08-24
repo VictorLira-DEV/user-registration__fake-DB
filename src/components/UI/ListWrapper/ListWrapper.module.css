@@ -20,4 +20,10 @@
   overflow-x: scroll;
   scrollbar-width: thin;
 }
+
+@media screen and (max-width: 799px) {
+  .list_wrapper {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=ListWrapper.module.css.map */

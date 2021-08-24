@@ -28,7 +28,7 @@ const Footer = function () {
                     </div>
                     <div className={styles.phone}>
                         <div className={styles.cell}>
-                            <AiFillPhone/>
+                            <AiFillPhone />
                             <p>+1-543-123-4567</p>
                         </div>
                         <div className={styles.email}>
@@ -53,15 +53,15 @@ const Footer = function () {
                     <div class={styles.social_media}>
                         <div>
                             {/* <i class="fab fa-facebook-f"></i> */}
-                            <AiFillFacebook/>
+                            <AiFillFacebook  style={{fontSize: '25px'}} />
                         </div>
                         <div>
                             {/* <i class="fab fa-twitter"></i> */}
-                            <IoLogoTwitter/>
+                            <IoLogoTwitter style={{fontSize: '25px'}}  />
                         </div>
                         <div>
                             {/* <i class="fab fa-instagram"></i> */}
-                            <AiFillInstagram/>
+                            <AiFillInstagram style={{fontSize: '25px'}} />
                         </div>
                     </div>
                 </div>

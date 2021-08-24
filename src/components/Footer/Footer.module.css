@@ -106,12 +106,6 @@
   margin-right: 10px;
 }
 
-@media screen and (max-width: 1135px) {
-  .footer {
-    padding: 200px 30px 100px 30px;
-  }
-}
-
 @media screen and (max-width: 823px) {
   .footer .footerWrapper {
     -webkit-box-orient: vertical;
@@ -151,7 +145,7 @@
 
 @media screen and (max-width: 500px) {
   .footer {
-    padding: 200px 30px 50px 30px;
+    padding: 50px 30px 50px 30px;
   }
   .footer .footerWrapper .footer2 {
     -webkit-box-orient: vertical;

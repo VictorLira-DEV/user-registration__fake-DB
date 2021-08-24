@@ -123,7 +123,7 @@ const CompaniesList = function (props) {
                         id={acc.id}
                     >
                         <div className={styles.company_profile}>
-                            <img src={`./${acc.img}.jpg`} alt="avatar" />
+                            <img src={`./${acc.img}.png`} alt="avatar" />
                             <div className={styles.home}>
                                 <HiUserGroup /> <span> {acc.name} </span>
                             </div>

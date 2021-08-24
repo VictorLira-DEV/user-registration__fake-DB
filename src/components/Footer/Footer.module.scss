@@ -82,11 +82,11 @@
 }
 
 
-@media screen and (max-width: 1135px) {
-    .footer {
-        padding: 200px 30px 100px 30px;
-    }
-}
+// @media screen and (max-width: 1135px) {
+//     .footer {
+//         padding: 200px 30px 100px 30px;
+//     }
+// }
 
 @media screen and (max-width: 823px) {
     .footer {
@@ -127,7 +127,7 @@
 
 @media screen and (max-width: 500px) {
     .footer {
-        padding: 200px 30px 50px 30px;
+        padding: 50px 30px 50px 30px;
 
         .footerWrapper {
             .footer2 {

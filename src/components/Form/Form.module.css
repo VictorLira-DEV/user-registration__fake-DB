@@ -5,6 +5,8 @@
   border-radius: 4px;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  margin-right: 30px;
+  min-width: 350px;
 }
 
 .form h2 {
@@ -88,5 +90,36 @@
   cursor: not-allowed;
   background: #b4b4b4;
   border: 1px solid #b4b4b4;
+}
+
+@media screen and (max-width: 799px) {
+  .form {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 0 0 30px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media screen and (max-width: 457px) {
+  .form {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .form {
+    width: 100%;
+    min-width: 100%;
+    padding: 30px 20px;
+  }
 }
 /*# sourceMappingURL=Form.module.css.map */

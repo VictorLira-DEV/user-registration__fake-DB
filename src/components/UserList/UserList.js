@@ -32,7 +32,7 @@ const UserList = function (props) {
                         className={styles.profile_wrapper}
                     >
                         <div className={styles.profile}>
-                            <img src={`./${acc.sex}.jpg`} alt="avatar" />
+                            <img src={`./${acc.sex}.png`} alt="avatar" />
                             <p>{acc.username}</p>
                             <div className={styles.home}>
                                 <AiFillHome /> <span>{acc.city} </span>

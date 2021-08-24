@@ -19,30 +19,37 @@ function App() {
     const [menu, menuState] = useState("users");
 
     useEffect(() => {
-        let account = [];
-        fetch(`http://localhost:3004/${menu}`)
+        fetch(`http://localhost:3004/users`)
             .then((response) => response.json())
             .then((json) => {
+                let account = [];
                 json.forEach((f) => {
                     account.unshift(f);
                 });
+                
+                setUserListState(account)
+                return fetch("http://localhost:3004/companies");
+            })
+            .then((response) => response.json())
+            .then((json) => {
+                let companies = [];
+                json.forEach((f) => {
+                    companies.unshift(f);
+                });
 
-                if (menu === "companies") {
-                    setCompanyListState(() => {
-                        return account;
-                    });
-                }
-                if (menu === "users") {
-                    setUserListState(() => {
-                        return account;
-                    });
-                }
-
-                if (menu === "founders") {
-                    setFoundersListState(account);
-                }
+                setCompanyListState(companies)
+                return fetch("http://localhost:3004/founders");
+            })
+            .then((response) => response.json())
+            .then((json) => {
+                
+                let founders = [];
+                json.forEach((f) => {
+                    founders.unshift(f);
+                });
+                setFoundersListState(founders)
             });
-    }, [menu]);
+    }, []);
 
     const addingNewUser = function (
         uName,
@@ -98,39 +105,39 @@ function App() {
         setDisplayModal(false);
     };
 
-    const [userFilter, setUserState] = useState('');
+    const [userFilter, setUserState] = useState("");
 
     const filter = function (e) {
-        setUserState(e.target.value)
+        setUserState(e.target.value);
     };
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            fetch(`http://localhost:3004/users?username=${userFilter    }`)
-            .then((response) => response.json())
-            .then((json) => {
-                if (json.length > 0) {
-                    setUserListState(json);
-                } else {
-                    let account = [];
-                    fetch(`http://localhost:3004/users`)
-                        .then((response) => response.json())
-                        .then((json) => {
-                            json.forEach((f) => {
-                                account.unshift(f);
+            fetch(`http://localhost:3004/users?username=${userFilter}`)
+                .then((response) => response.json())
+                .then((json) => {
+                    if (json.length > 0) {
+                        setUserListState(json);
+                    } else {
+                        let account = [];
+                        fetch(`http://localhost:3004/users`)
+                            .then((response) => response.json())
+                            .then((json) => {
+                                json.forEach((f) => {
+                                    account.unshift(f);
+                                });
+                                setUserListState(() => {
+                                    return account;
+                                });
                             });
-                            setUserListState(() => {
-                                return account;
-                            });
-                        });
-                }
-            });
+                    }
+                });
         }, 1000);
 
         return () => {
             clearTimeout(timer);
         };
-    }, [userFilter])
+    }, [userFilter]);
 
     return (
         <React.Fragment>

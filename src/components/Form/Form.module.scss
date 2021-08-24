@@ -6,7 +6,8 @@
   background-color: $white;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-
+  margin-right: 30px;
+  min-width: 350px;
   h2 {
     margin-bottom: 30px;
   }
@@ -86,5 +87,33 @@
       background: rgb(180, 180, 180);
       border: 1px solid rgb(180, 180, 180);
     }
+  }
+}
+
+@media screen and (max-width: 799px){
+  .form{
+    align-self: flex-start;
+    margin: 0 0 30px 0;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .form{
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 457px){
+  .form{
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .form{
+    width: 100%;
+    min-width: 100%;
+    padding: 30px 20px;
   }
 }

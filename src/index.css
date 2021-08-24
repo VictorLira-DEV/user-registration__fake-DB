@@ -22,7 +22,7 @@
   background-color: #1c2230;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 30px 0 60px 30px;
+  padding: 30px 30px 60px 30px;
 }
 
 ::-webkit-scrollbar {
@@ -38,5 +38,14 @@
 ::-webkit-scrollbar-thumb {
   border-radius: 6px;
   background: #ecd2f0;
+}
+
+@media screen and (max-width: 799px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=index.css.map */
