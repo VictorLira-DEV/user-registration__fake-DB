@@ -25,7 +25,7 @@
 ## About
 I've developed this app using an Fake API called Json Placeholder you can find it on --> https://jsonplaceholder.typicode.com/, this API allow us to work with some routs, this project has users, companies, and founders routs! all the data is comming from the database file, the form allows the user to register, I used Fetch function to GET the data from back-end, to POST and DELETE the user! it's 100% responsible.
 
-## ⭐ Features
+## :star: Features
 - [x] Search bar
 - [x] Form validation
 - [x] Add and remove User
