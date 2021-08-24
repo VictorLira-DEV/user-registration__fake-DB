@@ -15,7 +15,30 @@
   margin: 0 auto;
 }
 
-.header img {
+.header .header_logo {
   width: 150px;
+}
+
+.header .menu_hamburger {
+  width: 30px;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .menu_hamburger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .header .header_logo {
+    width: 100px;
+  }
 }
 /*# sourceMappingURL=Header.module.css.map */

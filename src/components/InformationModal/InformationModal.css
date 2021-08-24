@@ -3,7 +3,7 @@
   height: 100vh;
   padding: 10px;
   background: rgba(0, 0, 0, 0.6);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -28,7 +28,7 @@
 
 .modal header {
   padding: 10px 20px;
-  background: #8f248f;
+  background-color: #181e2a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

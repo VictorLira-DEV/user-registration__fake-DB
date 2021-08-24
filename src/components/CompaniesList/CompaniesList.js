@@ -128,7 +128,7 @@ const CompaniesList = function (props) {
                                 <HiUserGroup /> <span> {acc.name} </span>
                             </div>
                             <div className={styles.work}>
-                                <BsFillPersonCheckFill />{" "}
+                                <BsFillPersonCheckFill />
                                 <span>{acc.year} </span>
                             </div>
                             <div className={styles.tech}>

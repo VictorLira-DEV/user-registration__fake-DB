@@ -36,8 +36,8 @@
   padding: 5px 10px;
   color: white;
   font-size: 14px;
-  background: #2fb62f;
-  border: 1px solid #22da22;
+  background: black;
+  border: 1px solid #1aa4ce;
 }
 
 .profile_wrapper .founders_profile .about {
@@ -50,8 +50,8 @@
   padding: 5px 10px;
   color: white;
   font-size: 14px;
-  background: #2fadb6;
-  border: 1px solid #279097;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #ea00ff;
 }
 
 .profile_wrapper .founders_profile img {

@@ -1,5 +1,7 @@
 @import '../../SCSS-Variables/Variables';
 
+
+
 .header{
     padding: 20px 40px ;
     background: $dark-purple;
@@ -9,7 +11,30 @@
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
-    img{
+    .header_logo{
         width: 150px;
+    }
+
+    .menu_hamburger{
+        width: 30px;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header{
+        width: 100%;
+        justify-content: space-between;
+        .menu_hamburger{
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 525px){
+    .header{
+        .header_logo{
+            width: 100px;
+        }
     }
 }

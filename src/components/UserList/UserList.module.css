@@ -42,13 +42,13 @@
 }
 
 .profile_wrapper .profile button.remove {
-  background: #f84444;
+  background: black;
   border: 1px solid red;
 }
 
 .profile_wrapper .profile button.overview {
-  background: #42afcf;
-  border: 1px solid #1aa4ce;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #15c8ff;
 }
 
 .profile_wrapper .profile img {

@@ -20,7 +20,7 @@ const UserList = function (props) {
     };
 
     const mouseOutHandler = function (e) {
-        serUserHover("");
+        // serUserHover("");
     };
 
     return (
@@ -42,8 +42,8 @@ const UserList = function (props) {
                                     style={{
                                         color: `${
                                             acc.sex === "male"
-                                                ? "rgb(127, 177, 253)"
-                                                : "rgb(228, 155, 224)"
+                                                ? "rgb(21, 200, 255)"
+                                                : "rgb(227, 56, 250)"
                                         }`,
                                     }}
                                 />
@@ -55,7 +55,7 @@ const UserList = function (props) {
                                     className={styles.remove}
                                     onClick={removeAccount}
                                 >
-                                    Remove user
+                                    Remove
                                 </Button>
                                 <Button
                                     id={acc.id}

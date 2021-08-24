@@ -1,10 +1,27 @@
 import styles from "./Header.module.css";
-import Navigation from "./Navigation/Navigation";
+import Navigation from "../Header/Navigation/DesktopMenu/Navigation";
+import MenuMobile from './Navigation/MenuMobile/MenuMobile';
+import React, {useState} from 'react'
 const Header = function () {
+const [displayMenu, setDisplayMenu] = useState(false)
+
+
+const displayMenuMobile = function(e){
+    e.preventDefault();
+
+    setDisplayMenu(true)
+}
+
+const closeMenu = function(){
+    setDisplayMenu(false)
+}
+
     return (
         <header className={styles.header}>
-            <img src="./logo.svg"></img>
+            <img className={styles.header_logo} src="./logo.svg"/>
+            <img className={styles.menu_hamburger} src="./icon-hamburger.svg" onClick={displayMenuMobile}  />
             <Navigation />
+            <MenuMobile menuValid={displayMenu} onCloseMenu={closeMenu}  />
         </header>
     );
 };

@@ -1,13 +1,13 @@
 import styles from "./Navigation.module.css";
 import React, { useContext } from "react";
-import NavContext from "../../context/navcontext";
+import NavContext from "../../../context/navcontext";
 
 const Navigation = function () {
     const ctx = useContext(NavContext);
 
     return (
-        <nav>
-            <ul className={styles.navigation}>
+        <nav className={styles.nav_desktop}>
+            <ul className={styles.desktop_menu}>
                 <li
                     className={styles.navigation_item}
                     id="users"
