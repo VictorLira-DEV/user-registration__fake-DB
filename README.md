@@ -11,7 +11,7 @@
 # :computer: Demonstration of the application
 
 <p align="center">
-  <img src="https://ik.imagekit.io/mcvhbcq4zu/main_8_7r-TsTh7uI.gif?updatedAt=1629826952956" width="1400px"/>
+  <img src="https://ik.imagekit.io/mcvhbcq4zu/tg_qhcI6B12E.gif?updatedAt=1629833182293" width="1400px"/>
 </p>
 
 <br>
@@ -21,17 +21,24 @@
 </h3>
 <br>
 
-## ⭐ Features
-- [x] search bar
-- [x] Details of a specific movie
-- [x] overview
-- [x] you movie receive a rate
+
+## About
+I've developed this app using an Fake API called Json Placeholder you can find it on --> https://jsonplaceholder.typicode.com/, this API allow us to work with some routs, this project has users, companies, and founders routs! all the data is comming from the database file, the form allows the user to register, I used Fetch function to GET the data from back-end, to POST and DELETE the user! it's 100% responsible.
+
+## :star: Features
+- [x] Search bar
+- [x] Form validation
+- [x] Add and remove User
+- [x] Login in
+- [x] User overview
+- [x] founders modal
 
 
 ## :rocket: Technologies used:
 <p align="center">
 	<img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" alt="react" width="70" height="70"/>
 	<img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="js" width="70" height="70"/>
+	<img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" alt="css3" width="70" height="70"/>
 	<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="html5"  width="70" height="70"/>
 	<img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" alt="css3" width="70" height="70"/>
 </p>
@@ -48,7 +55,8 @@ To run the application on the web, follow the instructions :
 - `make sure you are inside the project's folder on VScode`
 - `open up a terminal`
 - run `yarn install` to install the dependencies of the project
-- After that, run `yarn start` to run the application, will open at the address `localhost:3000`
+- run `yarn run json:server`<-- this will provide our data,  address `localhost:3004` 
+- open a new terminal, run `yarn start` to run the application, will open at the address `localhost:3000`
 <br>
 
 
