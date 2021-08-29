@@ -18,8 +18,8 @@ const closeMenu = function(){
 
     return (
         <header className={styles.header}>
-            <img className={styles.header_logo} src="./logo.svg"/>
-            <img className={styles.menu_hamburger} src="./icon-hamburger.svg" onClick={displayMenuMobile}  />
+            <img className={styles.header_logo} src="./logo.svg" alt="logo"/>
+            <img className={styles.menu_hamburger} src="./icon-hamburger.svg" onClick={displayMenuMobile} alt="menu-icon"  />
             <Navigation />
             <MenuMobile menuValid={displayMenu} onCloseMenu={closeMenu}  />
         </header>

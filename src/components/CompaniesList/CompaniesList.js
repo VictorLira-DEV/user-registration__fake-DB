@@ -12,6 +12,7 @@ import { SiTypescript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import ProfileWrapper from "../UI/ProfileWrapper/ProfileWrapper";
 
+
 import Button from "../UI/button/Button";
 const CompaniesList = function (props) {
     const [companyHover, setCompanyHover] = useState("");

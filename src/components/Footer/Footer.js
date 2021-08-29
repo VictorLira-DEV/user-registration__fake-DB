@@ -45,22 +45,19 @@ const Footer = function () {
                         <li>Blog</li>
                     </ul>
 
-                    <ul class={styles.terms}>
+                    <ul className={styles.terms}>
                         <li>Contact Us</li>
                         <li>Terms</li>
                         <li>Privacy</li>
                     </ul>
-                    <div class={styles.social_media}>
+                    <div className={styles.social_media}>
                         <div>
-                            {/* <i class="fab fa-facebook-f"></i> */}
                             <AiFillFacebook  style={{fontSize: '25px'}} />
                         </div>
                         <div>
-                            {/* <i class="fab fa-twitter"></i> */}
                             <IoLogoTwitter style={{fontSize: '25px'}}  />
                         </div>
                         <div>
-                            {/* <i class="fab fa-instagram"></i> */}
                             <AiFillInstagram style={{fontSize: '25px'}} />
                         </div>
                     </div>

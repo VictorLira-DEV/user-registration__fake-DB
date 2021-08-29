@@ -18,8 +18,8 @@ const MenuMobile = (props) => {
             }`}
         >
             <div>
-                <img src="./logo.svg" />
-                <img src="./icon-close.svg" onClick={closeMenuHandler} />
+                <img src="./logo.svg" alt="logo" />
+                <img src="./icon-close.svg" onClick={closeMenuHandler} alt="logo-icon" />
             </div>
             <ul>
                 <li>Users</li>

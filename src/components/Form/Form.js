@@ -1,6 +1,7 @@
 import { useEffect, useReducer, useState } from "react";
 import styles from "./Form.module.css";
 import Button from "../UI/button/Button";
+import {v4 as uuid} from 'uuid';
 
 const Form = function (props) {
     const [isFormValid, setIsFormValid] = useState(false);
@@ -143,7 +144,8 @@ const Form = function (props) {
         const uCity = removeBigWhiteSpace(cityState.value);
         const uProfession = removeBigWhiteSpace(professionState.value);
 
-        let randomID = Math.random().toString(); //RANDOM ID
+        let randomID = uuid(); //RANDOM ID
+        console.log(randomID)
         fetch("http://localhost:3004/users", {
             method: "POST",
             body: JSON.stringify({

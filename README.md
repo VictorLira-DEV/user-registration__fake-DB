@@ -39,7 +39,7 @@
 <br>
 
 ## :information_source: Application installation
-- `https://github.com/VictorLira-DEV/React-Movie-app.git` to clone the repository
+- `https://github.com/VictorLira-DEV/Form-HTTP-requests_rest-API.git` to clone the repository
 
 <br>
 
