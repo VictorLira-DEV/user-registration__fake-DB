@@ -3,13 +3,11 @@ import Navigation from "../Header/Navigation/DesktopMenu/Navigation";
 import MenuMobile from './Navigation/MenuMobile/MenuMobile';
 import React, {useState} from 'react'
 const Header = function () {
-const [displayMenu, setDisplayMenu] = useState(false)
-
+const [displayMenu, setDisplayMenu] = useState(false);
 
 const displayMenuMobile = function(e){
     e.preventDefault();
-
-    setDisplayMenu(true)
+    setDisplayMenu(true);
 }
 
 const closeMenu = function(){

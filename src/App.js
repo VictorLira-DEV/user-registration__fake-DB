@@ -26,8 +26,8 @@ function App() {
                 json.forEach((f) => {
                     account.unshift(f);
                 });
-                
-                setUserListState(account)
+
+                setUserListState(account);
                 return fetch("http://localhost:3004/companies");
             })
             .then((response) => response.json())
@@ -37,17 +37,16 @@ function App() {
                     companies.unshift(f);
                 });
 
-                setCompanyListState(companies)
+                setCompanyListState(companies);
                 return fetch("http://localhost:3004/founders");
             })
             .then((response) => response.json())
             .then((json) => {
-                
                 let founders = [];
                 json.forEach((f) => {
                     founders.unshift(f);
                 });
-                setFoundersListState(founders)
+                setFoundersListState(founders);
             });
     }, []);
 

@@ -2,11 +2,9 @@ import styles from "./Footer.module.css";
 import { ImLocation } from "react-icons/im";
 import { AiFillPhone } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
-
 import { AiFillFacebook } from "react-icons/ai";
 import { IoLogoTwitter } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
-
 import { FaReact } from "react-icons/fa";
 
 const Footer = function () {

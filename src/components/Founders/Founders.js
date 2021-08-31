@@ -34,7 +34,7 @@ const Founders = function (props) {
                 <>
                     <AiFillFacebook
                         style={{ color: "blue", background: "white" }}
-                    />{" "}
+                    />
                     <span>Facebook </span>
                 </>
             );
