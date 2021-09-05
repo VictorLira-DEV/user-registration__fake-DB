@@ -46,7 +46,7 @@ I've developed this app using an Fake API called Json Placeholder you can find i
 <br>
 
 ## :information_source: Application installation
-- `https://github.com/VictorLira-DEV/Form-HTTP-requests_rest-API.git` to clone the repository
+- `https://github.com/VictorLira-DEV/Form` to clone the repository
 
 <br>
 
