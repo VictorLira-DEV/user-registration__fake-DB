@@ -1,6 +1,6 @@
-import styles from "./Header.module.css";
-import Navigation from "../Header/Navigation/DesktopMenu/Navigation";
-import MenuMobile from './Navigation/MenuMobile/MenuMobile';
+import styles from "../../styles/Header/Header.module.css";
+import DesktopMenu from "./DesktopMenu";
+import MenuMobile from './MenuMobile';
 import React, {useState} from 'react'
 const Header = function () {
 const [displayMenu, setDisplayMenu] = useState(false);
@@ -18,7 +18,7 @@ const closeMenu = function(){
         <header className={styles.header}>
             <img className={styles.header_logo} src="./logo.svg" alt="logo"/>
             <img className={styles.menu_hamburger} src="./icon-hamburger.svg" onClick={displayMenuMobile} alt="menu-icon"  />
-            <Navigation />
+            <DesktopMenu />
             <MenuMobile menuValid={displayMenu} onCloseMenu={closeMenu}  />
         </header>
     );
