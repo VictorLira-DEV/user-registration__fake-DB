@@ -24,7 +24,7 @@ const MenuMobile = (props) => {
             <ul>
                 <li>Users</li>
                 <li>Companies</li>
-                <li>Founders</li>
+                <li>Found</li>
                 <li>
                     <div>
                         <AiFillFacebook style={{ fontSize: "25px" }} />
