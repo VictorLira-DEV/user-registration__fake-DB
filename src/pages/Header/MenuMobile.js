@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "../../styles/pages/Header/Navigation/MenuMobile/MenuMobile.module.css";
+import logo from '../../assets/images/logo.svg'
+import closeIcon from '../../assets/images/icon-close.svg'
 
 import { AiFillFacebook } from "react-icons/ai";
 import { IoLogoTwitter } from "react-icons/io";
@@ -18,8 +20,8 @@ const MenuMobile = (props) => {
             }`}
         >
             <div>
-                <img src="./logo.svg" alt="logo" />
-                <img src="./icon-close.svg" onClick={closeMenuHandler} alt="logo-icon" />
+                <img src={logo} alt="logo" />
+                <img src={closeIcon} onClick={closeMenuHandler} alt="logo-icon" />
             </div>
             <ul>
                 <li>Users</li>

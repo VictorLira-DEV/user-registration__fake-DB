@@ -9,6 +9,7 @@ import ListWrapper from "./components/ListWrapper";
 import { useState, useEffect } from "react";
 import InformationModal from "./pages/InformationModal";
 import NavContext from "./context/navcontext";
+import useHttp from "./hooks/useHttp";
 
 function App() {
     const [userListState, setUserListState] = useState([]);
@@ -18,37 +19,34 @@ function App() {
     const [modalCurrentUser, setModalCurrentUser] = useState({});
     const [menu, menuState] = useState("users");
 
+    const { sendRequest } = useHttp();
+
     useEffect(() => {
-        fetch(`http://localhost:3004/users`)
-            .then((response) => response.json())
-            .then((json) => {
-                let account = [];
-                json.forEach((f) => {
-                    account.unshift(f);
-                });
-
-                setUserListState(account);
-                return fetch("http://localhost:3004/companies");
+        const receiveUsers = (users) => {
+            const usersList = [];
+            users.forEach((user) => {
+                usersList.unshift(user)
             })
-            .then((response) => response.json())
-            .then((json) => {
-                let companies = [];
-                json.forEach((f) => {
-                    companies.unshift(f);
-                });
 
-                setCompanyListState(companies);
-                return fetch("http://localhost:3004/founders");
-            })
-            .then((response) => response.json())
-            .then((json) => {
-                let founders = [];
-                json.forEach((f) => {
-                    founders.unshift(f);
-                });
-                setFoundersListState(founders);
-            });
-    }, []);
+            setUserListState(usersList);
+        };
+
+        const receiveCompanies = (companies) => {
+            setCompanyListState(companies);
+        };
+
+        const receiveFounders = (founders) => {
+            setFoundersListState(founders);
+        };
+
+        sendRequest({ url: "http://localhost:3004/users" }, receiveUsers);
+
+        sendRequest(
+            { url: "http://localhost:3004/companies" },
+            receiveCompanies
+        );
+        sendRequest({ url: "http://localhost:3004/founders" }, receiveFounders);
+    }, [sendRequest]);
 
     const addingNewUser = function (
         uName,
@@ -81,7 +79,8 @@ function App() {
             return filtered;
         });
 
-        fetch(`http://localhost:3004/users/${e.target.id}`, {
+        sendRequest({
+            url: `http://localhost:3004/users/${e.target.id}`,
             method: "DELETE",
         });
     };
@@ -114,16 +113,16 @@ function App() {
         const timer = setTimeout(() => {
             fetch(`http://localhost:3004/users?username=${userFilter}`)
                 .then((response) => response.json())
-                .then((json) => {
-                    if (json.length > 0) {
-                        setUserListState(json);
+                .then((users) => {
+                    if (users.length > 0) {
+                        setUserListState(users);
                     } else {
                         let account = [];
                         fetch(`http://localhost:3004/users`)
                             .then((response) => response.json())
-                            .then((json) => {
-                                json.forEach((f) => {
-                                    account.unshift(f);
+                            .then((users) => {
+                                users.forEach((user) => {
+                                    account.unshift(user);
                                 });
                                 setUserListState(() => {
                                     return account;
@@ -131,7 +130,7 @@ function App() {
                             });
                     }
                 });
-        }, 1000);
+        }, 500);
 
         return () => {
             clearTimeout(timer);

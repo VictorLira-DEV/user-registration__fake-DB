@@ -25,7 +25,6 @@ const UserList = function (props) {
 
     return (
         <React.Fragment>
-            {console.log(props.list)}
             {props.list.map((acc) => {
                 return (
                     <ProfileWrapper

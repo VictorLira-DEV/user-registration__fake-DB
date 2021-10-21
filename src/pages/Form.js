@@ -1,4 +1,5 @@
 import { useEffect, useReducer, useState } from "react";
+import { removeBigWhiteSpace } from "../helper/reusableFunctions";
 import styles from "../styles/pages/Form/Form.module.css";
 import Button from "../components/Button";
 import { v4 as uuid } from "uuid";
@@ -10,7 +11,7 @@ const Form = function (props) {
     const [usernameState, dispatchUsername] = useReducer(
         (state, action) => {
             if (action.type === "USER_INPUT") {
-                return { value: action.val, isValid: action.val.length > 5 };
+                return { value: action.val, isValid: state.isValid };
             }
             if (action.type === "USER_BLUR") {
                 return { value: state.value, isValid: state.value.length > 5 };
@@ -36,10 +37,7 @@ const Form = function (props) {
     const [cityState, dispatchMunicipio] = useReducer(
         (state, action) => {
             if (action.type === "USER_INPUT") {
-                return {
-                    value: action.val,
-                    isValid: action.val.trim().length > 5,
-                };
+                return { value: action.val, isValid: state.isValid };
             }
             if (action.type === "USER_BLUR") {
                 return {
@@ -68,10 +66,7 @@ const Form = function (props) {
     const [professionState, dispatchProfessionState] = useReducer(
         (state, action) => {
             if (action.type === "USER_INPUT") {
-                return {
-                    value: action.val,
-                    isValid: action.val.trim().length > 5,
-                };
+                return { value: action.val, isValid: state.isValid };
             }
             if (action.type === "USER_BLUR") {
                 return {
@@ -120,22 +115,6 @@ const Form = function (props) {
         setUserSex(e.target.id);
     };
 
-    const removeBigWhiteSpace = function (name) {
-        const inputValue = name
-            .toLowerCase()
-            .replaceAll(/\s+/g, "+")
-            .split("+")
-            .join(" ")
-            .trim();
-        const inputValueFormated = inputValue.split(" ");
-        const namesUpper = [];
-
-        for (const n of inputValueFormated) {
-            namesUpper.push(n[0].toUpperCase() + n.slice(1));
-        }
-        return namesUpper.join(" ");
-    };
-
     const addUser = function (e) {
         e.preventDefault();
         if (isFormValid !== true) return;
@@ -158,10 +137,7 @@ const Form = function (props) {
             headers: {
                 "Content-Type": "application/json; charset=UTF-8",
             },
-        })
-            .then((response) => response.json())
-            .then((data) => {});
-
+        });
         props.onAddingNewUser(
             uName,
             uCity,
