@@ -1,9 +1,9 @@
 
 ## **<h2 align="center">React Application 💻</h2>**
 
-<h3 align="center">
+<h2 align="center">
         My Personal Project ✔️
-</h3>
+</h2>
 <br>
 <p align="center">
   <a href="#computer-demonstration-of-the-application">Demonstration of the application</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
