@@ -2,7 +2,7 @@
 ## **<h2 align="center">React Application 💻</h2>**
 
 <h2 align="center">
-        My Personal Project ✔️
+         😎 My Personal Project ✔️
 </h2>
 <br>
 <p align="center">
