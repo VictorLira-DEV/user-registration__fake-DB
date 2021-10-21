@@ -1,0 +1,102 @@
+.profile_wrapper {
+
+    .overview_founders_profile--hover {
+      transform: translateY(0%);
+    }
+  
+
+  .founders_profile {
+    max-width: 100%;
+    padding: 10px;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .overview {
+      width: 90%;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 4px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+      padding: 5px 10px;
+      color: white;
+      font-size: 14px;
+      background: black;
+      border: 1px solid rgb(26, 164, 206);
+    }
+
+    .about {
+      width: 90%;
+      cursor: pointer;
+      margin-top: 40px;
+      border-radius: 4px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+      padding: 5px 10px;
+      color: white;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid rgb(234, 0, 255);
+    }
+
+    img {
+      width: 130px;
+      border: 2px solid rgb(116, 124, 138);
+      height: 130px;
+      border-radius: 100%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .home {
+      width: 100%;
+      margin-top: 10px;
+      font-size: 14px;
+      color: rgb(226, 210, 188);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      & :first-child {
+        justify-self: flex-start;
+        font-size: 15px;
+        margin-right: 20px;
+        color: rgb(226, 210, 188);
+      }
+    }
+
+    .work {
+      width: 100%;
+      color: rgb(226, 210, 188);
+      font-size: 12px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      & :first-child {
+        justify-self: flex-start;
+        font-size: 15px;
+        margin-right: 20px;
+      }
+    }
+
+    .company {
+      width: 100%;
+      margin-top: 20px;
+      font-size: 15px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      & :first-child {
+        justify-self: flex-start;
+        font-size: 15px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
