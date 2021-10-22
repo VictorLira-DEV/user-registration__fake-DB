@@ -1,4 +1,4 @@
-import styles from "../styles/components/ProfileWrapper/ProfileWrapper.module.css";
+import styles from "../../styles/components/UI/ProfileWrapper/ProfileWrapper.module.css";
 
 const ProfileWrapper = function (props) {
     return (

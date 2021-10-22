@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import styles from "../styles/pages/CompaniesList/CompaniesList.module.css";
+import styles from "../styles/components/CompaniesList/CompaniesList.module.css";
 import { HiUserGroup } from "react-icons/hi";
 import { BsFillPersonCheckFill } from "react-icons/bs";
-import ProfileOverview from "../components/ProfileOverview";
+import ProfileOverview from "./UI/ProfileOverview";
 import { DiCss3 } from "react-icons/di";
 import { DiRuby } from "react-icons/di";
 import { AiFillHtml5 } from "react-icons/ai";
@@ -10,9 +10,9 @@ import { DiPython } from "react-icons/di";
 import { SiJavascript } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
-import ProfileWrapper from "../components/ProfileWrapper";
+import ProfileWrapper from "./UI/ProfileWrapper";
 
-import Button from "../components/Button";
+import Button from "./UI/Button";
 const CompaniesList = function (props) {
     const [companyHover, setCompanyHover] = useState("");
 

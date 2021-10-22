@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Button from "../components/Button";
-import styles from "../styles/pages/UserList/UserList.module.css";
+import Button from "./UI/Button";
+import styles from "../styles/components/UserList/UserList.module.css";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillPersonCheckFill } from "react-icons/bs";
-import ProfileOverview from "../components/ProfileOverview";
-import ProfileWrapper from "../components/ProfileWrapper";
+import ProfileOverview from "./UI/ProfileOverview";
+import ProfileWrapper from "./UI/ProfileWrapper";
 
 const UserList = function (props) {
     const [userHover, serUserHover] = useState("");

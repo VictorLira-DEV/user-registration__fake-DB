@@ -4,10 +4,10 @@ import { FaSpotify } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
 import { FaBirthdayCake } from "react-icons/fa";
-import styles from "../styles/pages/Founders/Founders.module.css";
-import Button from "../components/Button";
-import ProfileOverview from "../components/ProfileOverview";
-import ProfileWrapper from "../components/ProfileWrapper";
+import styles from "../styles/components/Founders/Founders.module.css";
+import Button from "./UI/Button";
+import ProfileOverview from "./UI/ProfileOverview";
+import ProfileWrapper from "./UI/ProfileWrapper";
 
 // import larry from '../assets/larry.png'
 

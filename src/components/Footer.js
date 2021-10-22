@@ -1,4 +1,4 @@
-import styles from "../styles/pages/Footer/Footer.module.css";
+import styles from "../styles/components/Footer/Footer.module.css";
 import { ImLocation } from "react-icons/im";
 import { AiFillPhone } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";

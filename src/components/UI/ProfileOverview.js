@@ -1,4 +1,4 @@
-import "../styles/components/ProfileOverview/ProfileOverview.css";
+import "../../styles/components/UI/ProfileOverview/ProfileOverview.css";
 
 const ProfileOverview = function (props) {
     return (

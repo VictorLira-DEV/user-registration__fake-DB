@@ -1,7 +1,7 @@
 import React from "react";
 import ReactPORTAL from "react-dom";
 import { AiFillCloseCircle } from "react-icons/ai";
-import "../styles/pages/InformationModal/InformationModal.css";
+import "../styles/components/InformationModal/InformationModal.css";
 
 const Backdrop = () => {
     return <div className="backdrop"></div>;

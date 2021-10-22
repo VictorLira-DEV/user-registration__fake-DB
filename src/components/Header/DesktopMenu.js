@@ -1,4 +1,4 @@
-import styles from "../../styles/pages/Header/DesktopMenu/DesktopMenu.module.css";
+import styles from "../../styles/components/header/navigation/DesktopMenu/DesktopMenu.module.css";
 import React, { useContext } from "react";
 import NavContext from "../../context/navcontext";
 

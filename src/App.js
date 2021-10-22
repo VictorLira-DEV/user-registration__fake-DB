@@ -1,13 +1,13 @@
 import React from "react";
-import Form from "./pages/Form";
-import Header from "./pages/Header/Header";
-import UserList from "./pages/UserList";
-import CompaniesList from "./pages/CompaniesList";
-import Founders from "./pages/Founders";
-import Footer from "./pages/Footer";
-import ListWrapper from "./components/ListWrapper";
+import Form from "./components/Form";
+import Header from "./components/Header/Header";
+import UserList from "./components/UserList";
+import CompaniesList from "./components/CompaniesList";
+import Founders from "./components/Founders";
+import Footer from "./components/Footer";
+import ListWrapper from "./components/UI/ListWrapper";
 import { useState, useEffect } from "react";
-import InformationModal from "./pages/InformationModal";
+import InformationModal from "./components/InformationModal";
 import NavContext from "./context/navcontext";
 import useHttp from "./hooks/useHttp";
 

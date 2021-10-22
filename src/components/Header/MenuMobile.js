@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/pages/Header/Navigation/MenuMobile/MenuMobile.module.css";
+import styles from "../../styles/components/header/navigation/MenuMobile/MenuMobile.module.css";
 import logo from '../../assets/images/logo.svg'
 import closeIcon from '../../assets/images/icon-close.svg'
 

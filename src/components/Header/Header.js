@@ -1,4 +1,4 @@
-import styles from "../../styles/pages/Header/Header.module.css";
+import styles from "../../styles/components/header/Header.module.css";
 import logo from '../../assets/images/logo.svg';
 import hamburguer from '../../assets/images/icon-hamburger.svg';
 import DesktopMenu from "./DesktopMenu";

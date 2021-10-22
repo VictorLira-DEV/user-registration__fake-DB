@@ -1,7 +1,7 @@
 import { useEffect, useReducer, useState } from "react";
 import { removeBigWhiteSpace } from "../helper/reusableFunctions";
-import styles from "../styles/pages/Form/Form.module.css";
-import Button from "../components/Button";
+import styles from "../styles/components/Form/Form.module.css";
+import Button from "./UI/Button";
 import { v4 as uuid } from "uuid";
 
 const Form = function (props) {
