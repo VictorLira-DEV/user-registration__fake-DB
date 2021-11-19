@@ -10,13 +10,13 @@ const Backdrop = () => {
 const Modal = function (props) {
     return (
         <div className="modal active" onClick={props.onCloseModal}>
-            <header>
+            <header className="modal__header">
                 <h3>Learn more</h3>
                 <div>
                     <AiFillCloseCircle />
                 </div>
             </header>
-            <section>
+            <section className="modal__body">
                 <h1>{props.currentUserModal.name}</h1>
                 <p>{props.currentUserModal.bio}</p>
                 <p>Font: wikipedia.com</p>

@@ -1,13 +1,9 @@
-.profile_wrapper .overview_company_profile--hover {
+.profile__overview--hover {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
 
-.profile_wrapper:not(:last-child) {
-  margin-right: 10px;
-}
-
-.profile_wrapper .company_profile {
+.profile {
   max-width: 100%;
   padding: 10px;
   height: 100%;
@@ -26,11 +22,15 @@
           align-items: center;
 }
 
-.profile_wrapper .company_profile p {
+.profile:not(:last-child) {
+  margin-right: 10px;
+}
+
+.profile__description {
   margin-bottom: 10px;
 }
 
-.profile_wrapper .company_profile .overview {
+.profile__btn-overview {
   width: 90%;
   cursor: pointer;
   margin-top: 10px;
@@ -44,7 +44,7 @@
   border: 1px solid #3cd1ff;
 }
 
-.profile_wrapper .company_profile img {
+.profile__image {
   width: 130px;
   border: 2px solid #596170;
   height: 130px;
@@ -54,7 +54,7 @@
   margin-bottom: 10px;
 }
 
-.profile_wrapper .company_profile .home {
+.profile__home {
   width: 150px;
   margin-top: 10px;
   font-size: 15px;
@@ -71,13 +71,13 @@
       flex-wrap: wrap;
 }
 
-.profile_wrapper .company_profile .home :first-child {
+.profile__home :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;
 }
 
-.profile_wrapper .company_profile .work {
+.profile__work {
   width: 150px;
   font-size: 12px;
   display: -webkit-box;
@@ -93,13 +93,13 @@
       flex-wrap: wrap;
 }
 
-.profile_wrapper .company_profile .work :first-child {
+.profile__work :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;
 }
 
-.profile_wrapper .company_profile .tech {
+.profile__tech {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,7 +114,7 @@
   margin: 20px 0 20px 0;
 }
 
-.profile_wrapper .company_profile .tech .tech_img {
+.profile__tech-icon {
   margin: 0;
   width: 30px;
   height: 30px;

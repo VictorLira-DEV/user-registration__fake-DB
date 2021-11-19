@@ -3,7 +3,7 @@ import "../../styles/components/UI/ProfileOverview/ProfileOverview.css";
 const ProfileOverview = function (props) {
     return (
         <div
-            className={`profile_overview ${props.className}`}
+            className={`profile-overview ${props.className}`}
             onMouseOut={props.onMouseOutHandler}
         >
             {props.children}

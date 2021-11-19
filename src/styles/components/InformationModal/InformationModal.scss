@@ -1,8 +1,8 @@
-.backdrop{
-    width: 100VW;
+.backdrop {
+    width: 100vw;
     height: 100vh;
     padding: 10px;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     position: fixed;
     top: 0;
     left: 0;
@@ -11,7 +11,7 @@
     z-index: 10;
 }
 
-.modal{
+.modal {
     background: white;
     position: fixed;
     z-index: 20;
@@ -23,8 +23,8 @@
     border-radius: 6px;
     overflow-y: scroll;
     text-align: center;
-    
-    header{
+
+    &__header {
         padding: 10px 20px;
         background-color: rgb(24, 30, 42);
         display: flex;
@@ -32,21 +32,21 @@
         align-items: center;
         color: white;
         text-align: justify;
-        & :nth-child(2){
+        & :nth-child(2) {
             cursor: pointer;
             font-size: 25px;
         }
     }
-    section{
+    &__body {
         padding: 40px;
-        & :nth-child(3){
+        & :nth-child(3) {
             margin-top: 10px;
             color: red;
         }
-        h1{
+        h1 {
             margin-bottom: 10px;
         }
-        p{
+        p {
             text-align: justify;
         }
     }

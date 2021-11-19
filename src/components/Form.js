@@ -173,12 +173,14 @@ const Form = function (props) {
     }, [usernameValid, cityValid, professionValid, userSex]);
 
     return (
-        <form id="form" method="post" className={styles.form}>
+        <form id="form" method="post" className={styles["main-form"]}>
             <h2>Create Account</h2>
             <div
-                className={`${styles.form_control} ${
-                    (usernameState.isValid === false && styles.invalid) ||
-                    (usernameState.isValid === true && styles.valid)
+                className={`${styles["main-form__control"]} ${
+                    (usernameState.isValid === false &&
+                        styles["main-form__control--invalid"]) ||
+                    (usernameState.isValid === true &&
+                        styles["main-form__control--valid"])
                 }`}
             >
                 <label htmlFor="name"> Username</label>
@@ -191,9 +193,11 @@ const Form = function (props) {
                 />
             </div>
             <div
-                className={`${styles.form_control} ${
-                    (cityState.isValid === false && styles.invalid) ||
-                    (cityState.isValid === true && styles.valid)
+                className={`${styles["main-form__control"]} ${
+                    (cityState.isValid === false &&
+                        styles["main-form__control--invalid"]) ||
+                    (cityState.isValid === true &&
+                        styles["main-form__control--valid"])
                 }`}
             >
                 <label htmlFor="municipio"> City </label>
@@ -206,9 +210,11 @@ const Form = function (props) {
                 />
             </div>
             <div
-                className={`${styles.form_control} ${
-                    (professionState.isValid === false && styles.invalid) ||
-                    (professionState.isValid === true && styles.valid)
+                className={`${styles["main-form__control"]} ${
+                    (professionState.isValid === false &&
+                        styles["main-form__control--invalid"]) ||
+                    (professionState.isValid === true &&
+                        styles["main-form__control--valid"])
                 }`}
             >
                 <label htmlFor="password2"> Profession</label>
@@ -220,7 +226,7 @@ const Form = function (props) {
                     value={professionState.value}
                 />
             </div>
-            <div className={styles.form_control}>
+            <div className={styles["main-form__control"]}>
                 <label>About you</label>
                 <textarea
                     value={textAreaState}
@@ -229,7 +235,7 @@ const Form = function (props) {
                     onChange={textAreaChangeHandler}
                 ></textarea>
             </div>
-            <div className={styles.sex}>
+            <div className={styles['main-form__sex-field']}>
                 <div>
                     <label htmlFor="tMas">Masculino</label>
                     <input
@@ -251,8 +257,8 @@ const Form = function (props) {
             </div>
             <Button
                 onClick={addUser}
-                className={`${styles.btn_submit} ${
-                    isFormValid ? styles.enabled : styles.disabled
+                className={`${styles['main-form__btn-submit']} ${
+                    isFormValid ? styles['main-form__btn-submit--enabled'] : styles['main-form__btn-submit--disabled']
                 }`}
             >
                 Submit

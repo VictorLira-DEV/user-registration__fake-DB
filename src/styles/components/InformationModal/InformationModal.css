@@ -1,5 +1,5 @@
 .backdrop {
-  width: 100VW;
+  width: 100vw;
   height: 100vh;
   padding: 10px;
   background: rgba(0, 0, 0, 0.6);
@@ -26,7 +26,7 @@
   text-align: center;
 }
 
-.modal header {
+.modal__header {
   padding: 10px 20px;
   background-color: #181e2a;
   display: -webkit-box;
@@ -42,25 +42,25 @@
   text-align: justify;
 }
 
-.modal header :nth-child(2) {
+.modal__header :nth-child(2) {
   cursor: pointer;
   font-size: 25px;
 }
 
-.modal section {
+.modal__body {
   padding: 40px;
 }
 
-.modal section :nth-child(3) {
+.modal__body :nth-child(3) {
   margin-top: 10px;
   color: red;
 }
 
-.modal section h1 {
+.modal__body h1 {
   margin-bottom: 10px;
 }
 
-.modal section p {
+.modal__body p {
   text-align: justify;
 }
 /*# sourceMappingURL=InformationModal.css.map */

@@ -1,13 +1,13 @@
-.profile_wrapper .overview_profile--hover {
+.profile .overview_profile--hover {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
 
-.profile_wrapper:not(:last-child) {
+.profile:not(:last-child) {
   margin-right: 10px;
 }
 
-.profile_wrapper .profile {
+.profile__users {
   max-width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -25,39 +25,17 @@
           align-items: center;
 }
 
-.profile_wrapper .profile p {
+.profile__users p {
   margin-bottom: 10px;
 }
 
-.profile_wrapper .profile button {
-  width: 90%;
-  cursor: pointer;
-  margin-top: 10px;
-  border-radius: 4px;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-  padding: 5px 10px;
-  color: inherit;
-  font-size: 14px;
-}
-
-.profile_wrapper .profile button.remove {
-  background: black;
-  border: 1px solid red;
-}
-
-.profile_wrapper .profile button.overview {
-  background: rgba(0, 0, 0, 0.8);
-  border: 1px solid #15c8ff;
-}
-
-.profile_wrapper .profile img {
+.profile__users img {
   width: 100%;
   height: 200px;
   margin-bottom: 10px;
 }
 
-.profile_wrapper .profile .home {
+.profile__home-icon {
   width: 150px;
   font-size: 14px;
   margin-bottom: 5px;
@@ -69,13 +47,13 @@
           justify-content: flex-start;
 }
 
-.profile_wrapper .profile .home :first-child {
+.profile__home-icon :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;
 }
 
-.profile_wrapper .profile .work {
+.profile__work-icon {
   width: 150px;
   font-size: 15px;
   display: -webkit-box;
@@ -91,9 +69,31 @@
       flex-wrap: wrap;
 }
 
-.profile_wrapper .profile .work :first-child {
+.profile__work-icon :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;
+}
+
+.profile button {
+  width: 90%;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  padding: 5px 10px;
+  color: inherit;
+  font-size: 14px;
+}
+
+.profile button.profile__btn-remove-user {
+  background: black;
+  border: 1px solid red;
+}
+
+.profile button.profile__btn-overview {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #15c8ff;
 }
 /*# sourceMappingURL=UserList.module.css.map */

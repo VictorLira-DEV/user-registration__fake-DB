@@ -1,119 +1,122 @@
-@import '../../Variables';
+@import "../../Variables";
 
-.form {
-  width: 400px;
-  padding: 30px 40px;
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-  margin-right: 30px;
-  min-width: 350px;
-  h2 {
-    margin-bottom: 30px;
-  }
-
-  .sex{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    margin-bottom: 10px;
-    color: $form-text;
-    div{
-      label{
-        margin-right: 10px;
-      }
-    }
-  }
-
-  .form_control {
-    color: $form-text;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 15px;
-    margin-bottom: 10px;
-    textarea{
-      border: 1px solid $input-border;
-      max-width: 100%;
-      height: 70px;
-      max-height:70px;
-      min-height: 70px
-    }
-
-    &.invalid{
-      label{
-        color: red;
-      }
-
-      input{
-        border: 1px solid red;
-        background: rgb(245, 230, 230);
-      }
-    }
-
-    &.valid{
-
-      input{
-        border: 1px solid rgb(0, 255, 42);
-      }
-    }
-
-    input {
-      padding: 10px;
-      border: 1px solid $input-border;
-    }
-  }
-
-  .btn_submit {
-    color: $white;
-    display: block;
-    width: 100%;
-    padding: 10px;
+.main-form {
+    width: 400px;
+    padding: 30px 40px;
+    background-color: white;
     border-radius: 4px;
-    font-size: 16px;
-    transition: 0.4s;
-    // &:hover {
-    //   background-color: rgb(197, 219, 226);
-    // }
-
-    &.enabled{
-      cursor: pointer;
-      background-color: rgb(66, 175, 207);
-      border: 1px solid rgb(32, 166, 207);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    margin-right: 30px;
+    min-width: 350px;
+    h2 {
+        margin-bottom: 30px;
     }
 
-    &.disabled{
-      cursor: not-allowed;
-      background: rgb(180, 180, 180);
-      border: 1px solid rgb(180, 180, 180);
+    &__control {
+        color: $form-text;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+
+        textarea {
+            border: 1px solid $input-border;
+            max-width: 100%;
+            height: 70px;
+            max-height: 70px;
+            min-height: 70px;
+            padding: 10px;
+            &::placeholder {
+                color: rgb(143, 142, 142);
+            }
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid $input-border;
+        }
+
+        &--invalid {
+            label {
+                color: red;
+            }
+
+            input {
+                border: 1px solid red;
+                background: rgb(245, 230, 230);
+            }
+        }
+        &--valid {
+            input {
+                border: 1px solid rgb(0, 255, 42);
+            }
+        }
     }
-  }
+
+    &__sex-field {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        margin-bottom: 10px;
+        color: $form-text;
+        div {
+            label {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__btn-submit {
+        color: $white;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: 0.4s;
+        &:hover {
+            background-color: rgb(197, 219, 226);
+        }
+
+        &--enabled {
+            cursor: pointer;
+            background-color: rgb(66, 175, 207);
+            border: 1px solid rgb(32, 166, 207);
+        }
+
+        &--disabled {
+            cursor: not-allowed;
+            background: rgb(180, 180, 180);
+            border: 1px solid rgb(180, 180, 180);
+        }
+    }
 }
 
-@media screen and (max-width: 799px){
-  .form{
-    align-self: flex-start;
-    margin: 0 0 30px 0;
-  }
+@media screen and (max-width: 799px) {
+    .main-form {
+        align-self: flex-start;
+        margin: 0 0 30px 0;
+    }
 }
 
-@media screen and (max-width: 600px){
-  .form{
-    align-self: center;
-  }
+@media screen and (max-width: 600px) {
+    .main-form {
+        align-self: center;
+    }
 }
 
-@media screen and (max-width: 457px){
-  .form{
-    width: 100%;
-    min-width: 100%;
-  }
+@media screen and (max-width: 457px) {
+    .main-form {
+        width: 100%;
+        min-width: 100%;
+    }
 }
 
-@media screen and (max-width: 420px){
-  .form{
-    width: 100%;
-    min-width: 100%;
-    padding: 30px 20px;
-  }
+@media screen and (max-width: 420px) {
+    .main-form {
+        width: 100%;
+        min-width: 100%;
+        padding: 30px 20px;
+    }
 }

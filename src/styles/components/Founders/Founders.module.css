@@ -1,9 +1,9 @@
-.profile_wrapper .overview_founders_profile--hover {
+.profile__overview--hover {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
 
-.profile_wrapper .founders_profile {
+.profile__company {
   max-width: 100%;
   padding: 10px;
   height: 100%;
@@ -22,39 +22,11 @@
           align-items: center;
 }
 
-.profile_wrapper .founders_profile p {
+.profile__company p {
   margin-bottom: 10px;
 }
 
-.profile_wrapper .founders_profile .overview {
-  width: 90%;
-  cursor: pointer;
-  margin-top: 10px;
-  border-radius: 4px;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-  padding: 5px 10px;
-  color: white;
-  font-size: 14px;
-  background: black;
-  border: 1px solid #1aa4ce;
-}
-
-.profile_wrapper .founders_profile .about {
-  width: 90%;
-  cursor: pointer;
-  margin-top: 40px;
-  border-radius: 4px;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-  padding: 5px 10px;
-  color: white;
-  font-size: 14px;
-  background: rgba(0, 0, 0, 0.8);
-  border: 1px solid #ea00ff;
-}
-
-.profile_wrapper .founders_profile img {
+.profile__company img {
   width: 130px;
   border: 2px solid #747c8a;
   height: 130px;
@@ -64,7 +36,7 @@
   margin-bottom: 10px;
 }
 
-.profile_wrapper .founders_profile .home {
+.profile__home-icon {
   width: 100%;
   margin-top: 10px;
   font-size: 14px;
@@ -80,14 +52,14 @@
           align-items: center;
 }
 
-.profile_wrapper .founders_profile .home :first-child {
+.profile__home-icon :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;
   color: #e2d2bc;
 }
 
-.profile_wrapper .founders_profile .work {
+.profile__work-icon {
   width: 100%;
   color: #e2d2bc;
   font-size: 12px;
@@ -104,13 +76,13 @@
       flex-wrap: wrap;
 }
 
-.profile_wrapper .founders_profile .work :first-child {
+.profile__work-icon :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;
 }
 
-.profile_wrapper .founders_profile .company {
+.profile__company-icon {
   width: 100%;
   margin-top: 20px;
   font-size: 15px;
@@ -127,9 +99,37 @@
       flex-wrap: wrap;
 }
 
-.profile_wrapper .founders_profile .company :first-child {
+.profile__company-icon :first-child {
   justify-self: flex-start;
   font-size: 15px;
   margin-right: 20px;
+}
+
+.profile__btn-overview {
+  width: 90%;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  padding: 5px 10px;
+  color: white;
+  font-size: 14px;
+  background: black;
+  border: 1px solid #1aa4ce;
+}
+
+.profile__btn-about {
+  width: 90%;
+  cursor: pointer;
+  margin-top: 40px;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  padding: 5px 10px;
+  color: white;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #ea00ff;
 }
 /*# sourceMappingURL=Founders.module.css.map */

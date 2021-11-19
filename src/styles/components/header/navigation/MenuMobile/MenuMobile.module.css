@@ -1,4 +1,4 @@
-.menu_mobile {
+.nav-mobile {
   position: fixed;
   background: -webkit-gradient(linear, left top, left bottom, from(#181e2a), to(#3e3d5e));
   background: linear-gradient(#181e2a, #3e3d5e);
@@ -14,12 +14,12 @@
   transition: 1s;
 }
 
-.menu_mobile.active {
+.nav-mobile--active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
 
-.menu_mobile > div:first-child {
+.nav-mobile > div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,11 +32,11 @@
   margin-bottom: 100px;
 }
 
-.menu_mobile > div:first-child :last-child {
+.nav-mobile > div:first-child :last-child {
   width: 20px;
 }
 
-.menu_mobile ul {
+.nav-mobile__list {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,16 +47,16 @@
           flex-direction: column;
 }
 
-.menu_mobile ul li {
+.nav-mobile__item {
   width: 100%;
   text-transform: uppercase;
 }
 
-.menu_mobile ul li:not(:last-child) {
+.nav-mobile__item:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.menu_mobile ul li:last-child {
+.nav-mobile__item:last-child {
   position: absolute;
   bottom: 30px;
   display: -webkit-box;
@@ -68,7 +68,7 @@
   left: 0;
 }
 
-.menu_mobile ul li:last-child :not(:last-child) {
+.nav-mobile__item:last-child :not(:last-child) {
   margin-right: 20px;
 }
 /*# sourceMappingURL=MenuMobile.module.css.map */

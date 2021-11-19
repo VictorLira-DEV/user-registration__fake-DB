@@ -1,6 +1,6 @@
-@import '../../Variables';
-.header{
-    padding: 20px 40px ;
+@import "../../Variables";
+.main-header {
+    padding: 20px 40px;
     background: $dark-purple;
     color: white;
     display: flex;
@@ -8,29 +8,30 @@
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
-    .header_logo{
+    &__logo {
         width: 150px;
     }
 
-    .menu_hamburger{
+    &__menu_hamburger {
         width: 30px;
+        cursor: pointer;
         display: none;
     }
 }
 
-@media screen and (max-width: 768px){
-    .header{
+@media screen and (max-width: 768px) {
+    .main-header {
         width: 100%;
         justify-content: space-between;
-        .menu_hamburger{
+        &__menu_hamburger {
             display: block;
         }
     }
 }
 
-@media screen and (max-width: 525px){
-    .header{
-        .header_logo{
+@media screen and (max-width: 525px) {
+    .main-header {
+        &__logo {
             width: 100px;
         }
     }

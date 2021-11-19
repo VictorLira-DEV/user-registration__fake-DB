@@ -25,8 +25,8 @@ function App() {
         const receiveUsers = (users) => {
             const usersList = [];
             users.forEach((user) => {
-                usersList.unshift(user)
-            })
+                usersList.unshift(user);
+            });
 
             setUserListState(usersList);
         };

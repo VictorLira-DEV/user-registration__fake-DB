@@ -1,4 +1,4 @@
-.list_wrapper {
+.list-wrapper {
   background-color: #181e2a;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
@@ -22,7 +22,7 @@
 }
 
 @media screen and (max-width: 799px) {
-  .list_wrapper {
+  .list-wrapper {
     width: 100%;
   }
 }

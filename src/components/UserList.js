@@ -11,7 +11,7 @@ const UserList = function (props) {
 
     const removeAccount = function (e) {
         e.preventDefault();
-        props.onRemoveAccount(e)
+        props.onRemoveAccount(e);
     };
 
     const displayUserOverview = function (e) {
@@ -27,17 +27,14 @@ const UserList = function (props) {
         <React.Fragment>
             {props.list.map((acc) => {
                 return (
-                    <ProfileWrapper
-                        key={acc.id}
-                        className={styles.profile_wrapper}
-                    >
-                        <div className={styles.profile}>
+                    <ProfileWrapper key={acc.id} className={styles["profile"]}>
+                        <div className={styles["profile__users"]}>
                             <img src={`./${acc.sex}.png`} alt="avatar" />
                             <p>{acc.username}</p>
-                            <div className={styles.home}>
+                            <div className={styles["profile__home-icon"]}>
                                 <AiFillHome /> <span>{acc.city} </span>
                             </div>
-                            <div className={styles.work}>
+                            <div className={styles["profile__work-icon"]}>
                                 <BsFillPersonCheckFill
                                     style={{
                                         color: `${
@@ -49,10 +46,12 @@ const UserList = function (props) {
                                 />
                                 <span>{acc.profession} </span>
                             </div>
-                            <div className={styles.btns}>
+                            <div>
                                 <Button
                                     id={acc.id}
-                                    className={styles.remove}
+                                    className={
+                                        styles["profile__btn-remove-user"]
+                                    }
                                     onClick={removeAccount}
                                 >
                                     Remove
@@ -60,7 +59,7 @@ const UserList = function (props) {
                                 <Button
                                     id={acc.id}
                                     onClick={displayUserOverview}
-                                    className={styles.overview}
+                                    className={styles["profile__btn-overview"]}
                                 >
                                     Overview
                                 </Button>

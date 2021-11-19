@@ -15,19 +15,19 @@ const MenuMobile = (props) => {
 
     return (
         <nav
-            className={`${styles.menu_mobile} ${
-                props.menuValid && styles.active
+            className={`${styles['nav-mobile']} ${
+                props.menuValid && styles['nav-mobile--active']
             }`}
         >
             <div>
                 <img src={logo} alt="logo" />
                 <img src={closeIcon} onClick={closeMenuHandler} alt="logo-icon" />
             </div>
-            <ul>
-                <li>Users</li>
-                <li>Companies</li>
-                <li>Found</li>
-                <li>
+            <ul className={styles['nav-mobile__list']}>
+                <li className={styles['nav-mobile__item']}>Users</li>
+                <li className={styles['nav-mobile__item']}>Companies</li>
+                <li className={styles['nav-mobile__item']}>Found</li>
+                <li className={styles['nav-mobile__item']}>
                     <div>
                         <AiFillFacebook style={{ fontSize: "25px" }} />
                     </div>

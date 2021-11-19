@@ -18,27 +18,27 @@ const Founders = function (props) {
     const displayIcons = function (currentIcon) {
         if (currentIcon === "Spotify") {
             icons = (
-                <>
+                <React.Fragment>
                     <FaSpotify style={{ color: "rgb(47, 182, 47)" }} />{" "}
                     <span>Spotify </span>
-                </>
+                </React.Fragment>
             );
         }
         if (currentIcon === "Google") {
             icons = (
-                <>
+                <React.Fragment>
                     <FcGoogle /> <span>Google </span>
-                </>
+                </React.Fragment>
             );
         }
         if (currentIcon === "Facebook") {
             icons = (
-                <>
+                <React.Fragment>
                     <AiFillFacebook
                         style={{ color: "blue", background: "white" }}
                     />
                     <span>Facebook </span>
-                </>
+                </React.Fragment>
             );
         }
     };
@@ -57,31 +57,32 @@ const Founders = function (props) {
             {props.foundersList.map((acc) => {
                 return (
                     <ProfileWrapper
-                        className={`${styles.profile_wrapper}`}
+                        className={`${styles["profile"]}`}
                         id={acc.id}
+                        key={acc.id}
                     >
-                        <div className={styles.founders_profile}>
+                        <div className={styles["profile__company"]}>
                             <img src={`./${acc.img}.png`} alt="avatar" />
-                            <div className={styles.home}>
+                            <div className={styles["profile__home-icon"]}>
                                 <HiUserGroup /> <span> {acc.name} </span>
                             </div>
-                            <div className={styles.work}>
+                            <div className={styles["profile__work-icon"]}>
                                 <FaBirthdayCake /> <span>{acc.year} </span>
                             </div>
-                            <div className={styles.company}>
+                            <div className={styles["profile__company-icon"]}>
                                 {displayIcons(acc.company)} {icons}
                             </div>
                             <Button
                                 onClick={props.onDisplayModal}
                                 id={acc.id}
-                                className={styles.about}
+                                className={styles["profile__btn-about"]}
                             >
                                 About
                             </Button>
                             <Button
                                 id={acc.id}
                                 onClick={displayFoundersOverview}
-                                className={styles.overview}
+                                className={styles["profile__btn-overview"]}
                             >
                                 Overview
                             </Button>
@@ -90,7 +91,7 @@ const Founders = function (props) {
                             onMouseOutHandler={hideFoundersOverview}
                             className={`${
                                 acc.id === hoverEffect &&
-                                styles["overview_founders_profile--hover"]
+                                styles["profile__overview--hover"]
                             }`}
                         >
                             <h2>Overview</h2>

@@ -2,7 +2,7 @@ import styles from "../../styles/components/UI/ProfileWrapper/ProfileWrapper.mod
 
 const ProfileWrapper = function (props) {
     return (
-        <li className={`${styles.profile_wrapper} ${props.className}`}>
+        <li className={`${styles['profile-wrapper']} ${props.className}`}>
             {props.children}
         </li>
     );

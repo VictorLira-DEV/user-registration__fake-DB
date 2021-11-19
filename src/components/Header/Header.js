@@ -17,9 +17,9 @@ const closeMenu = function(){
 }
 
     return (
-        <header className={styles.header}>
-            <img className={styles.header_logo} src={logo} alt="logo"/>
-            <img className={styles.menu_hamburger} src={hamburguer} onClick={displayMenuMobile} alt="menu-icon"  />
+        <header className={styles['main-header']}>
+            <img className={styles.header__logo} src={logo} alt="logo"/>
+            <img className={styles['main-header__menu_hamburger']} src={hamburguer} onClick={displayMenuMobile} alt="menu-icon"  />
             <DesktopMenu />
             <MenuMobile menuValid={displayMenu} onCloseMenu={closeMenu}  />
         </header>

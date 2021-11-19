@@ -20,8 +20,8 @@ const CompaniesList = function (props) {
     const displayIcons = function (name) {
         if (name === "Spotify") {
             icons = (
-                <>
-                    <img className={styles.tech_img} src="c++.png" alt="logo" />
+                <React.Fragment>
+                    <img className={styles['profile__tech-icon']} src="c++.png" alt="logo" />
                     <DiRuby
                         style={{
                             color: "rgb(224, 166, 162)",
@@ -43,12 +43,12 @@ const CompaniesList = function (props) {
                             fontSize: "1.5rem",
                         }}
                     />
-                </>
+                </React.Fragment>
             );
         }
         if (name === "Facebook") {
             icons = (
-                <>
+                <React.Fragment>
                     <FaReact
                         style={{
                             color: "rgb(74, 213, 254)",
@@ -76,14 +76,14 @@ const CompaniesList = function (props) {
                             fontSize: "1.5rem",
                         }}
                     />
-                </>
+                </React.Fragment>
             );
         }
 
         if (name === "Google") {
             icons = (
-                <>
-                    <img className={styles.tech_img} src="c++.png" alt="logo" />
+                <React.Fragment>
+                    <img className={styles['profile__tech-icon']} src="c++.png" alt="logo" />
                     <DiPython style={{ color: "yellow", fontSize: "1.5rem" }} />
                     <SiJavascript
                         style={{ color: "yellow", fontSize: "1.5rem" }}
@@ -100,7 +100,7 @@ const CompaniesList = function (props) {
                             fontSize: "1.5rem",
                         }}
                     />
-                </>
+                </React.Fragment>
             );
         }
     };
@@ -118,27 +118,28 @@ const CompaniesList = function (props) {
         <React.Fragment>
             {props.list.map((acc) => {
                 return (
-                    <ProfileWrapper
-                        className={styles.profile_wrapper}
-                        id={acc.id}
-                    >
-                        <div className={styles.company_profile}>
-                            <img src={`./${acc.img}.png`} alt="avatar" />
-                            <div className={styles.home}>
+                    <ProfileWrapper className={styles["profile"]} id={acc.id} key={acc.id}>
+                        <div className={styles["profile__company"]}>
+                            <img
+                                className={styles["profile__image"]}
+                                src={`./${acc.img}.png`}
+                                alt="avatar"
+                            />
+                            <div className={styles["profile__home"]}>
                                 <HiUserGroup /> <span> {acc.name} </span>
                             </div>
-                            <div className={styles.work}>
+                            <div className={styles["profile__work"]}>
                                 <BsFillPersonCheckFill />
                                 <span>{acc.year} </span>
                             </div>
-                            <div className={styles.tech}>
+                            <div className={styles["profile__tech"]}>
                                 {displayIcons(acc.name)}
                                 {icons}
                             </div>
                             <Button
                                 id={acc.id}
                                 onClick={displayCompanyOverview}
-                                className={styles.overview}
+                                className={styles["profile__btn-overview"]}
                             >
                                 Overview
                             </Button>
@@ -147,11 +148,13 @@ const CompaniesList = function (props) {
                             onMouseOutHandler={hideCompanyOverview}
                             className={`${
                                 acc.id === companyHover &&
-                                styles["overview_company_profile--hover"]
+                                styles["profile__overview--hover"]
                             }`}
                         >
                             <h2>Overview</h2>
-                            <p>{acc.description}</p>
+                            <p className={styles["profile__description"]}>
+                                {acc.description}
+                            </p>
                         </ProfileOverview>
                     </ProfileWrapper>
                 );

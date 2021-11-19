@@ -1,4 +1,4 @@
-.list_wrapper{
+.list-wrapper{
     background-color: rgb(24, 30, 42);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
     list-style: none;
@@ -16,7 +16,7 @@
 } 
 
 @media screen and (max-width: 799px){
-    .list_wrapper{
+    .list-wrapper{
       width: 100%;
     }
   }
